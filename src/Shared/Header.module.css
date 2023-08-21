@@ -1,0 +1,17 @@
+.parent{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+}
+
+.parent ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
