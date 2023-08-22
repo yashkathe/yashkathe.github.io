@@ -1,19 +1,40 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import styles from "./FMLink.module.css";
 
 const FMLink = (props) => {
 	const liVariants = {
+		initial: {
+			y: "-2vh",
+			opacity: 0,
+		},
+		animate: {
+			y: 0,
+			opacity: 1,
+			transition: {
+				type: " tween",
+				duration: 1,
+			},
+		},
 		hover: {
-			scale: 1.3,
+			scale: 1.2,
 		},
 	};
 
 	return (
-		<motion.li className={styles.list} variants={liVariants} whileHover='hover'>
-			<Link to={props.to}>{props.children}</Link>
+		<motion.li
+			className={styles.list}
+			variants={liVariants}
+			whileHover='hover'
+			initial='initial'
+			animate='animate'>
+			<NavLink
+				to={props.to}
+				className={(navData) => (navData.isActive ? styles.active : "")}>
+				{props.children}
+			</NavLink>
 		</motion.li>
 	);
 };

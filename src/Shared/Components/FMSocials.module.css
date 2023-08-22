@@ -1,0 +1,12 @@
+.parent{
+    height: 7vh;
+}
+
+.parent:hover{
+    cursor:pointer;
+}
+
+.parent img {
+    height: 100%;
+    width: 100%;
+}

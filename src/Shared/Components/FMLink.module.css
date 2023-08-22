@@ -1,5 +1,26 @@
 .list{
-    font-size: 1.5rem;
-    color: #ffffff;
-    padding: 1px 1.5rem;
+    font-size: 1.4rem;
+    color: #e8e6e3;
+    padding: 1px 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.list  a{
+    box-sizing: border-box;
+    height: 70%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.active{
+    background-color: #e8e6e3;
+    color: #121212;
 }

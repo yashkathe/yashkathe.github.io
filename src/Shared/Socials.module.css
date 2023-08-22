@@ -1,0 +1,13 @@
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 1vw;
+    top: 50vh;
+}
+
+.parent > div {
+    padding-bottom: 1rem ;
+}

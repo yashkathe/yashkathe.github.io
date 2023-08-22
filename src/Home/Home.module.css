@@ -1,0 +1,22 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: calc(100vh - 15vh);
+    /* margin: 0 5vw; */
+    color: #e4e3e3
+}
+
+.parent>div:nth-child(1) {
+    width: 40%;
+}
+
+
+.parent>div:nth-last-child(1) {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}

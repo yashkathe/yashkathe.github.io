@@ -3,6 +3,7 @@ import React from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import Header from "./Shared/Header";
+import Socials from "./Shared/Socials";
 import Home from "./Home/Home";
 import Projects from "./Projects/Project";
 import Experience from "./Experience/Experience";
@@ -15,6 +16,7 @@ function App() {
 	return (
 		<Router>
 			<Header />
+			<Socials />
 			<main className={styles.main}>
 				<Routes>
 					<Route path='/' element={<Home />} />
