@@ -17,6 +17,7 @@ const Header = () => {
 			transition: {
 				type: " tween",
 				duration: 1,
+				delay: 1,
 			},
 		},
 	};
@@ -28,7 +29,7 @@ const Header = () => {
 			</motion.div>
 			<ul>
 				<FMLink to='/'>Home</FMLink>
-				<FMLink to='/projects'> Project </FMLink>
+				<FMLink to='/projects'> Projects </FMLink>
 				<FMLink to='/experience'> Experience </FMLink>
 				<FMLink to='/about'> About </FMLink>
 				<FMLink to='/contact'> Contact </FMLink>

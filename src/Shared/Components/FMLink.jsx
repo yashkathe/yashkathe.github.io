@@ -16,6 +16,7 @@ const FMLink = (props) => {
 			transition: {
 				type: " tween",
 				duration: 1,
+				delay: 1,
 			},
 		},
 		hover: {
