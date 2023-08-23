@@ -1,9 +1,32 @@
-.parent{
+.parent {
     height: 7vh;
 }
 
-.parent:hover{
-    cursor:pointer;
+.parent>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.parent>div>div {
+    position: absolute;
+    left: -2vw;
+}
+
+
+.link {
+    height: 1.5rem;
+    padding-right: 1vw;
+}
+
+.linkDisable {
+    display: none;
+}
+
+.parent:hover {
+    cursor: pointer;
 }
 
 .parent img {
