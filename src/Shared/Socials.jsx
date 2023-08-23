@@ -5,6 +5,7 @@ import styles from "./Socials.module.css";
 
 import linkedin from "/Icons/linkedin.svg";
 import github from "/Icons/github.svg";
+import leetcode from "/Icons/leetcode.png";
 
 const Socials = () => {
 	return (
@@ -18,6 +19,11 @@ const Socials = () => {
 				alt='github'
 				src={github}
 				href='https://github.com/yashkathe'
+			/>
+			<FMSocials
+				alt='leetcode'
+				src={leetcode}
+				href='https://leetcode.com/yashkathe/'
 			/>
 		</div>
 	);

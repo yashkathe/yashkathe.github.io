@@ -47,7 +47,23 @@ const Skills = () => {
 				</motion.h3>
 			</div>
 			<motion.div variants={childVariants} initial='initial' animate='animate'>
-				<div></div>
+				<div className={styles.skills}>
+					<div>
+						<p>Web Development:</p>
+						<p>HTML, CSS, Javascript, Typescript, NodeJS, ReactJS</p>
+					</div>
+					<div></div>
+					<div>
+						<p>Programming:</p>
+						<p>C, C++, Python, Bash</p>
+					</div>
+					<div></div>
+					<div>
+						<p>DevOps and Databases:</p>
+						<p>Git, Github Actions, Linux, Docker, Ansible, SQL, MongoDB</p>
+					</div>
+					<div></div>
+				</div>
 			</motion.div>
 		</div>
 	);

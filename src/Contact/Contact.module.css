@@ -21,8 +21,26 @@
     margin: 4vh 0;
 }
 
-.header>div {
-    border: 1px solid #e8e6e3;
+.header>div:nth-child(2) {
     width: 80vw;
+    border: 1px solid #e8e6e3;
 }
 
+.children{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.children > div:nth-child(1){
+    width: 65%;
+}
+
+.children > div:nth-child(2){
+    width: 35%;
+    margin-right: 10vw;
+}

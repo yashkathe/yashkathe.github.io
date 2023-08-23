@@ -9,7 +9,7 @@ body {
     box-sizing: border-box;
 }
 
-div{
+div {
     box-sizing: border-box;
 }
 
@@ -24,6 +24,28 @@ a {
 
 a:hover {
     color: none;
-    text-decoration:none; 
-    cursor:pointer;  
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}
+
+input:active,
+textarea:active {
+    outline: none;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
 }

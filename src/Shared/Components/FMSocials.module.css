@@ -25,7 +25,7 @@
     display: none;
 }
 
-.parent:hover {
+.parent a:hover {
     cursor: pointer;
 }
 

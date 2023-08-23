@@ -23,3 +23,24 @@ p {
     font-size: 1.2rem;
     line-height: 2rem;
 }
+
+.skills > div:nth-child(odd){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.skills > div:nth-child(even){
+    border: 1px solid #e8e6e3;
+    width: 100%;
+}
+
+.skills > div:nth-child(odd) > p:nth-child(1){
+    width: 30%;
+}
+
+.skills > div:nth-child(odd) > p:nth-child(2){
+    width: 70%;
+}
