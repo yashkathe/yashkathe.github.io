@@ -15,8 +15,8 @@
     height: 100%;
 }
 
-input[name='name'],
-input[name='email']{
+input[name='user_name'],
+input[name='user_email']{
     width: 15vw;
     margin-bottom: 4%;
     margin-right: 2vw;
@@ -38,8 +38,8 @@ textarea[name="message"]{
     font-size: 1rem;
 }
 
-input[name='name']:focus,
-input[name='email']:focus,
+input[name='user_name']:focus,
+input[name='user_email']:focus,
 textarea[name="message"]:focus{
     box-shadow: 0px 0px 5px 1px #e8e6e3;
 }

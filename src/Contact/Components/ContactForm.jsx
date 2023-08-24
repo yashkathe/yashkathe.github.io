@@ -1,37 +1,27 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 
 import styles from "./ContactForm.module.css";
 
 const ContactForm = () => {
-	const [formData, setFormData] = useState({
-		name: "",
-		email: "",
-		message: "",
-	});
+	const templateID = import.meta.env.VITE_API_EMAILJS_TEMPLATE;
+	const serviceID = import.meta.env.VITE_API_EMAILJS_SERVICE;
+	const publicKey = import.meta.env.VITE_API_EMAILJS_KEY;
+
+	const form = useRef();
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
-		// emailjs
-		// 	.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
-		// 	.then(
-		// 		(result) => {
-		// 			console.log(result.text);
-		// 		},
-		// 		(error) => {
-		// 			console.log(error.text);
-		// 		}
-		// 	);
-	};
-
-	const handleChange = (e) => {
-		// const { name, value } = e.target;
-		// setFormData((prevData) => ({
-		// 	...prevData,
-		// 	[name]: value,
-		// }));
+		emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
+			(result) => {
+				console.log(result.text);
+			},
+			(error) => {
+				console.log(error.text);
+			}
+		);
 	};
 
 	const childVariants = {
@@ -51,28 +41,25 @@ const ContactForm = () => {
 	};
 
 	return (
-		<motion.div variants={childVariants} initial='initial' animate='animate'>
-			<form onSubmit={handleSubmit} className={styles.form}>
+		<motion.div
+			variants={childVariants}
+			ref={form}
+			initial='initial'
+			animate='animate'>
+			<form className={styles.form} onSubmit={handleSubmit}>
 				<div>
 					<input
 						type='text'
-						name='name'
+						name='user_name'
 						placeholder='Name'
 						minLength='4'
-						onChange={handleChange}
 					/>
-					<input
-						type='email'
-						name='email'
-						placeholder='Email'
-						onChange={handleChange}
-					/>
+					<input type='email' name='user_email' placeholder='Email' />
 				</div>
 				<div>
 					<textarea
 						name='message'
 						placeholder='Message'
-						onChange={handleChange}
 						rows='10'
 						minLength='10'
 						column='100%'></textarea>

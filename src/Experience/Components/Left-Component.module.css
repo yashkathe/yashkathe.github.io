@@ -1,0 +1,56 @@
+.parent{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: -12vw;
+    height: 70vh;
+}
+
+.timeline{
+    position: absolute;
+    left: 60%;
+    color: #e8e6e3;
+    margin-top: 1vh;
+}
+
+.companyLogo {
+    position: absolute;
+    left: 50%;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.companyLogo > div {
+    border: 1px solid #e8e6e3;
+    position: absolute;
+    height: 100%;
+}
+
+.companyLogo > img {
+    height: 60px;
+    width: 60px;
+    z-index: 1;
+}
+
+.description{
+    position: absolute;
+    left: 15%;
+    width: 28vw;
+    color: #e8e6e3;
+    margin: 0;
+}
+
+.description > h2{
+    font-size: 1.6rem;
+}
+
+.description > h3 {
+    font-size: 1.4rem;
+}
+
+.description > p {
+    font-size: 1.2rem;
+}
