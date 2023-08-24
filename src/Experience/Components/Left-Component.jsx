@@ -68,7 +68,9 @@ const LeftComponent = (props) => {
 				animate='animate'>
 				<h2>{props.jobTitle}</h2>
 				<h3>{props.company}</h3>
-				<p>{props.jobDescription}</p>
+				<p>{props.jobDescription1}</p>
+				<p>{props.jobDescription2}</p>
+				<p>{props.jobDescription3}</p>
 			</motion.div>
 			<motion.div
 				className={styles.timeline}

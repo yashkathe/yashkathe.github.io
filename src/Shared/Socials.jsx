@@ -5,7 +5,7 @@ import styles from "./Socials.module.css";
 
 import linkedin from "/Icons/linkedin.svg";
 import github from "/Icons/github.svg";
-import leetcode from "/Icons/leetcode.png";
+import leetcode from "/Icons/leetcode-3.png";
 
 const Socials = () => {
 	return (
