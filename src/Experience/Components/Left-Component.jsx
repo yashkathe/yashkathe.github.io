@@ -39,10 +39,12 @@ const LeftComponent = (props) => {
 	const imgVariants = {
 		initial: {
 			scale: 0.7,
+			y: 20,
 			opacity: 0,
 		},
 		animate: {
 			scale: 1,
+			y: 0,
 			opacity: 1,
 			transition: {
 				type: " tween",

@@ -3,12 +3,15 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import styles from "./Projects.module.css";
+import shared from "../Shared/CSS/shared.module.css";
+
+import Project from "./Components/Project";
 
 const Projects = () => {
 	const headingVariants = {
 		initial: {
 			x: "-2vw",
-			opacity: 0,
+			opacity: 0.5,
 		},
 		animate: {
 			x: 0,
@@ -21,8 +24,8 @@ const Projects = () => {
 	};
 
 	return (
-		<div className={styles.parent}>
-			<div className={styles.header}>
+		<div className={shared.parent}>
+			<div className={shared.header}>
 				<motion.h1
 					variants={headingVariants}
 					initial='initial'
@@ -30,7 +33,20 @@ const Projects = () => {
 					My Projects
 				</motion.h1>
 				<div></div>
-				<div className={styles.children}></div>
+				<div className={styles.children}>
+					<div>
+						<Project delay={Math.random() * 0.2} />
+					</div>
+					<div>
+						<Project delay={Math.random() * 0.2} />
+					</div>
+					<div>
+						<Project delay={Math.random() * 0.2} />
+					</div>
+					<div>
+						<Project delay={Math.random() * 0.2} />
+					</div>
+				</div>
 			</div>
 		</div>
 	);

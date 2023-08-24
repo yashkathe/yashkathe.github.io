@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import LeftComponent from "./Components/Left-Component";
 
 import styles from "./Experience.module.css";
+import shared from "../Shared/CSS/shared.module.css";
 
 import iotiot from "/Icons/iotiot.png";
 
@@ -24,8 +25,8 @@ const Experience = () => {
 	};
 
 	return (
-		<div className={styles.parent}>
-			<div className={styles.header}>
+		<div className={shared.parent}>
+			<div className={shared.header}>
 				<motion.h1
 					variants={headingVariants}
 					initial='initial'
@@ -33,7 +34,7 @@ const Experience = () => {
 					My Work Experience
 				</motion.h1>
 				<div></div>
-				<div className={styles.children}>
+				<div className={shared.children}>
 					<LeftComponent
 						imageSrc={iotiot}
 						jobTitle='Linux Software Engineer'

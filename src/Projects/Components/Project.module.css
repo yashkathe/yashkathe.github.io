@@ -1,0 +1,9 @@
+.parent {
+    background-color: #CBC3E3;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.parent:hover{
+    cursor: pointer;
+}

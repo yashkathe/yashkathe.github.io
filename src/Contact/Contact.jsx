@@ -5,6 +5,7 @@ import MailBox from "./Components/MailBox";
 import ContactForm from "./Components/ContactForm";
 
 import styles from "./Contact.module.css";
+import shared from "../Shared/CSS/shared.module.css";
 
 const Contact = () => {
 	const headingVariants = {
@@ -22,8 +23,8 @@ const Contact = () => {
 		},
 	};
 	return (
-		<div className={styles.parent}>
-			<div className={styles.header}>
+		<div className={shared.parent}>
+			<div className={shared.header}>
 				<motion.h1
 					variants={headingVariants}
 					initial='initial'

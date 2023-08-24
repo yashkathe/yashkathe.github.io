@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./About.module.css";
+import shared from "../Shared/CSS/shared.module.css";
 
 import { motion } from "framer-motion";
 
@@ -25,8 +26,8 @@ const About = () => {
 	};
 
 	return (
-		<div className={styles.parent}>
-			<div className={styles.header}>
+		<div className={shared.parent}>
+			<div className={shared.header}>
 				<motion.h1
 					variants={headingVariants}
 					initial='initial'
