@@ -28,7 +28,14 @@ const Project = (props) => {
 			className={styles.parent}
 			variants={parentVariants}
 			initial='initial'
-			animate='animate'></motion.div>
+			animate='animate'>
+			<div className={props.mobile ? styles.mobileImg : styles.pcImg}>
+				<motion.img src={props.src} alt={props.alt} />
+			</div>
+			<div className={styles.projectTitle}>
+				<h1>{props.projectTitle}</h1>
+			</div>
+		</motion.div>
 	);
 };
 

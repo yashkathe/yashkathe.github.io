@@ -2,8 +2,48 @@
     background-color: #CBC3E3;
     width: 100%;
     border-radius: 15px;
+    position: relative;
 }
 
 .parent:hover{
     cursor: pointer;
+}
+
+.pcImg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%)
+}
+
+.pcImg > img {
+    height: auto;
+    width: 100%;
+}
+
+.mobileImg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+}
+
+.mobileImg > img {
+    height: 100%;
+    width: auto;
+}
+
+.projectTitle{
+    position: relative;
+    bottom: -102%;
+    left: 5%;
+}
+
+.projectTitle h1{
+    margin: 0;
+    font-size: 1.3rem;
 }
