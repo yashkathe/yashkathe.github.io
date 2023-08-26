@@ -35,3 +35,13 @@
     justify-content: center;
     margin-top: 8vh;
 }
+
+@media(max-width:56rem) {
+    .header>h1{
+        font-size: 2rem;
+    }
+
+    .parent{
+    margin-left: 10vw;
+    }
+}

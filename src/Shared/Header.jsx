@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import FMLink from "./Components/FMLink";
+import HamBurgerIcon from "./Hamburger-Icon/HamBurgerIcon";
+import MobileLinks from "./Hamburger-Icon/MobileLinks";
 
 import styles from "./Header.module.css";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
+	const [mobileNavClick, setMobileNavClick] = useState(false);
+
 	const variants = {
 		initial: {
 			y: "-2vw",
@@ -22,6 +26,10 @@ const Header = () => {
 		},
 	};
 
+	const mobileNavHandler = () => {
+		setMobileNavClick((prev) => !prev);
+	};
+
 	return (
 		<div className={styles.parent}>
 			<motion.div variants={variants} initial='initial' animate='animate'>
@@ -34,6 +42,12 @@ const Header = () => {
 				<FMLink to='/about'> About </FMLink>
 				<FMLink to='/contact'> Contact </FMLink>
 			</ul>
+			<div className={styles.hamBurgerIcon}>
+				<HamBurgerIcon onClick={mobileNavHandler} clicked={mobileNavClick} />
+			</div>
+			<AnimatePresence>
+				{mobileNavClick && <MobileLinks onClick={mobileNavHandler} />}
+			</AnimatePresence>
 		</div>
 	);
 };

@@ -48,7 +48,7 @@ const FMSocials = (props) => {
 	return (
 		<motion.div
 			className={styles.parent}
-			variants={variants}
+			variants={props.isMobile ? "" : variants}
 			initial='initial'
 			animate='animate'
 			whileHover='hover'>

@@ -27,10 +27,11 @@ const FMLink = (props) => {
 	return (
 		<motion.li
 			className={styles.list}
-			variants={liVariants}
+			variants={props.isMobile ? "" : liVariants}
 			whileHover='hover'
 			initial='initial'
-			animate='animate'>
+			animate='animate'
+			onClick={props.onClick}>
 			<NavLink
 				to={props.to}
 				className={(navData) => (navData.isActive ? styles.active : "")}>

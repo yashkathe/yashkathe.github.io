@@ -9,6 +9,12 @@
     transform: translate(0%, -10%)
 }
 
-.parent > div {
-    margin-bottom: 1rem ;
+.parent>div {
+    margin-bottom: 1rem;
+}
+
+@media(max-width:56rem) {
+    .parent {
+        display: none;
+    }
 }

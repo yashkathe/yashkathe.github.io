@@ -71,3 +71,10 @@
     height: auto;
     width: 100%;
 }
+
+@media(max-width:56rem) {
+    .projectTitle h1{
+        margin: 0;
+        font-size: 1.2rem;
+    }
+}

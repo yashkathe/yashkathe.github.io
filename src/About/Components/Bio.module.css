@@ -15,11 +15,45 @@
     width: 45%;
 }
 
-h3 {
+.parent h3 {
     font-size: 2rem;
 }
 
-p {
+.parent p {
     font-size: 1.2rem;
     line-height: 2rem;
 }
+
+/* @media(max-width:56rem) {
+    .bio {
+        flex-direction: column;
+        margin: 5vh 0;
+    }
+
+    .bio>div:nth-child(1),
+    .bio>div:nth-child(2) {
+        width: 100%;
+        margin-right: 10vw;
+    }
+
+    .parent h3 {
+        font-size: 1.5rem;
+    }
+
+    .parent p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+}
+
+@media(max-width:28rem) {
+    .parent h3 {
+        font-size: 1.5rem;
+    }
+
+    .parent p {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+} */

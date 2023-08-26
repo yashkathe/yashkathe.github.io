@@ -1,0 +1,31 @@
+.hbParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.hbParent>div {
+    width: 2rem;
+    border: 1.4px solid #e8e6e3;
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+
+
+.hbParent.clicked>div:first-child {
+    transform: rotate(45deg) translate(-0%, -50%);
+    margin: 0;
+}
+
+.hbParent.clicked>div:nth-child(2) {
+    display: none;
+}
+
+.hbParent.clicked>div:last-child {
+    transform: rotate(-45deg) translate(5%, -50%);
+    margin: 0;
+}

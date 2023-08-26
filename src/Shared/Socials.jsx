@@ -7,7 +7,7 @@ import linkedin from "/Icons/linkedin.svg";
 import github from "/Icons/github.svg";
 import leetcode from "/Icons/leetcode-3.png";
 
-const Socials = () => {
+const Socials = (props) => {
 	return (
 		<div className={styles.parent}>
 			<FMSocials
