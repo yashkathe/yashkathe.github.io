@@ -56,10 +56,26 @@ const Project = (props) => {
 		},
 	};
 
+	const mobileVariants = {
+		initial: {
+			scale: 0.95,
+			opacity: 0,
+		},
+		animate: {
+			scale: 1,
+			opacity: 1,
+			transition: {
+				type: " tween",
+				duration: 0.6,
+				delay: props.delay,
+			},
+		},
+	};
+
 	return (
 		<motion.div
 			className={styles.parent}
-			variants={parentVariants}
+			variants={window.innerWidth < 896 ? mobileVariants : mobileVariants}
 			initial='initial'
 			animate='animate'
 			onMouseEnter={() => {
@@ -97,10 +113,10 @@ const Project = (props) => {
 						</div>
 					</motion.div>
 				)}
-				<div className={styles.projectTitle}>
-					<h1>{props.projectTitle}</h1>
-				</div>
 			</a>
+			<div className={styles.projectTitle}>
+				<h1>{props.projectTitle}</h1>
+			</div>
 		</motion.div>
 	);
 };

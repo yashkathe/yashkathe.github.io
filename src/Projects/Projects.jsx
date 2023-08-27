@@ -49,9 +49,7 @@ const Projects = () => {
 							href='https://github.com/yashkathe/F1-API'
 							description='F1-API is a TypeScript-based web scraping application designed to
                             extract comprehensive information about Formula 1 races, drivers,
-                            cars, standings, and race schedules. This powerful web scraper
-                            automates the process of gathering data and aggregating it into a
-                            structured format for easy analysis and consumption'
+                            cars, standings, race schedules and many more'
 						/>
 					</div>
 					<div>
@@ -62,7 +60,8 @@ const Projects = () => {
 							projectTitle='Weather web App'
 							mobile={false}
 							href='https://github.com/yashkathe/Weather-webapp'
-							description='Created a web app built using React, Redux, Framer Motion, and React Router, seamlessly integrated with the OpenWeather API. Explore real-time weather updates with dynamic animations, powered by Redux for state management, Framer Motion for fluid user interactions, and React Router for smooth navigation. Stay informed with accurate weather forecasts and a captivating UI, making every interaction a breeze'
+							description='Created a web app built using React, Redux, Framer Motion, and React Router, utilising 
+                            OpenWeather API. Stay informed with accurate weather forecasts and a captivating UI, making every interaction a breeze'
 						/>
 					</div>
 					<div>
@@ -73,7 +72,7 @@ const Projects = () => {
 							projectTitle='Anime Search Engine'
 							mobile={false}
 							href='https://github.com/yashkathe/Get-Anime-Sauce'
-							description='This web app helps you trace back the exact scene and episode from where the anime screenshot is taken from.'
+							description='Anime Search Engine webapp which helps you trace back the exact scene and episode from where the anime screenshot is taken from.'
 						/>
 					</div>
 					<div>
@@ -84,7 +83,8 @@ const Projects = () => {
 							projectTitle='Download Comic books API'
 							mobile={false}
 							href='https://github.com/yashkathe/Download-ComicBooks-API'
-							description='Powerful Comic Book Scraper crafted with Node.js and Cheerio. This versatile tool empowers comic enthusiasts to effortlessly access comprehensive information and download links for their favorite comic books from across the internet. Leveraging the capabilities of Node.js, this scraper efficiently collects and compiles all essential details, including cover art, titles, authors, and summaries, while also providing convenient download links for each issue. '
+							description='Powerful Comic Book Scraper crafted with Node.js and Cheerio. Leveraging the capabilities of Node.js, 
+                            this scraper efficiently collects and compiles all essential details, including cover art, titles, authors, and also providing convenient download links for each issue. '
 						/>
 					</div>
 					<div>
@@ -106,7 +106,8 @@ const Projects = () => {
 							projectTitle='Home monitoring system'
 							mobile={false}
 							href='https://github.com/yashkathe/Monitoring-system-with-arduino'
-							description='Engineered a comprehensive monitoring system utilizing an array of sensors including DHT22 for temperature and humidity, IR for proximity sensing, MQ6 for gas detection, all seamlessly integrated with an LCD display, all orchestrated through an Arduino Uno. This innovative system captures and displays real-time data, providing valuable insights into environmental conditions and ensuring safety through gas detection capabilities'
+							description='Engineered a monitoring system utilizing an array of sensors including DHT22 for temperature and humidity, IR for proximity sensing, MQ6 for gas detection,
+                             all seamlessly integrated with an LCD display, all orchestrated through an Arduino Uno. '
 						/>
 					</div>
 					<div>

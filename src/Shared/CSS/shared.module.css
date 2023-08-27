@@ -46,12 +46,14 @@
     margin-top: 8vh;
 }
 
-/* @media(max-width:56rem) {
-    .header>h1 {
-        font-size: 2rem;
+@media(max-width:56rem) {
+    .header-shared>h1 {
+        font-size: 2.5rem;
     }
+}
 
-    .parent {
-        margin-left: 10vw;
+@media(max-width:28rem) {
+    .header-shared>h1 {
+        font-size: 1.8rem;
     }
-} */
+}

@@ -40,9 +40,25 @@ const ContactForm = () => {
 		},
 	};
 
+	const childVariantsMobile = {
+		initial: {
+			scale: 0.95,
+			opacity: 0,
+		},
+		animate: {
+			scale: 1,
+			opacity: 1,
+			transition: {
+				type: " tween",
+				duration: 0.6,
+				delay: 0.5,
+			},
+		},
+	};
+
 	return (
 		<motion.div
-			variants={childVariants}
+			variants={window.innerWidth < 896 ? childVariantsMobile : childVariants}
 			ref={form}
 			initial='initial'
 			animate='animate'>

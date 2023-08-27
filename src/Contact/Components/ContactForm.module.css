@@ -4,6 +4,7 @@
     align-items: flex-start;
     justify-content: center;
     margin-top: 5vh;
+    width: 100%;
 }
 
 .form > div{
@@ -15,11 +16,14 @@
     height: 100%;
 }
 
+.form > div > input:first-child{
+    margin-right: 2vw;
+}
+
 input[name='user_name'],
 input[name='user_email']{
-    width: 15vw;
+    width: 100%;
     margin-bottom: 4%;
-    margin-right: 2vw;
     height: 4vh;
     background-color: #121212;
     border: 1px solid #e8e6e3;
@@ -28,7 +32,7 @@ input[name='user_email']{
 }
 
 textarea[name="message"]{
-    width: 33vw;
+    width: 100%;
     margin-bottom: 2%;
     background-color: #121212;
     border: 1px solid #e8e6e3;
@@ -60,3 +64,11 @@ button[type="submit"]:active{
     border-radius: 14px;
     transition: 200ms;
 }
+
+/* @media(max-width:56rem) {
+   
+}
+
+@media(max-width:28rem) {
+
+} */

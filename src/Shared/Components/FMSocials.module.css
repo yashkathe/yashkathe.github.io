@@ -32,3 +32,9 @@
     height: 100%;
     width: 100%;
 }
+
+@media(max-width:28rem) {
+    .link {
+        display: none;
+    }
+}

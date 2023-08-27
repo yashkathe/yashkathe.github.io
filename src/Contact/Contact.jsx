@@ -32,7 +32,7 @@ const Contact = () => {
 					Let's Talk
 				</motion.h1>
 				<div></div>
-				<div className={`${shared["children-shared-row"]} ${styles.children}`}>
+				<div className={`${styles.children}`}>
 					<div>
 						<ContactForm />
 					</div>

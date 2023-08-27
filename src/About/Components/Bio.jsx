@@ -37,17 +37,38 @@ const Bio = () => {
 		},
 	};
 
+	const childVariantsMobile = {
+		initial: {
+			scale: 0.95,
+			opacity: 0,
+		},
+		animate: {
+			scale: 1,
+			opacity: 1,
+			transition: {
+				type: " tween",
+				duration: 0.6,
+				delay: 0.5,
+			},
+		},
+	};
+
 	return (
 		<div className={`${shared["section-shared-about"]} ${styles.section}`}>
 			<div>
 				<motion.h3
-					variants={headingVariants}
+					variants={
+						window.innerWidth < 896 ? childVariantsMobile : headingVariants
+					}
 					initial='initial'
 					animate='animate'>
 					About Myself
 				</motion.h3>
 			</div>
-			<motion.div variants={childVariants} initial='initial' animate='animate'>
+			<motion.div
+				variants={window.innerWidth < 896 ? childVariantsMobile : childVariants}
+				initial='initial'
+				animate='animate'>
 				<p>
 					My journey began with a degree in Electronics and Telecommunication
 					from the University of Mumbai. Experiencing virtual classes during the

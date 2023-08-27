@@ -7,6 +7,10 @@
     align-items: flex-start;
 }
 
+.parent a:hover {
+    cursor: pointer;
+}
+
 .timeline p,
 .description p {
     font-size: 1.2rem;
@@ -15,7 +19,7 @@
     word-break: break-word;
 }
 
-.timeline p{
+.timeline p {
     font-size: 1.35rem;
 }
 
@@ -54,4 +58,62 @@
     display: flex;
     justify-content: flex-start;
     padding-left: 2.5rem;
+}
+
+.mobileTimeline {
+    display: none;
+}
+
+@media(max-width:56rem) {
+
+    .mobileTimeline {
+        display: block;
+        font-style: italic;
+        margin:0;
+    }
+
+    .timeline p,
+    .description p {
+        font-size: 1rem;
+        margin: 0% 0 3% 0;
+    }
+
+    .description h2 {
+        font-size: 1.7rem;
+    }
+
+    .description h3 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .companyLogo {
+        display: none;
+    }
+
+    .timeline {
+        display: none;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:28rem) {
+
+    .timeline p,
+    .description p {
+        font-size: 0.85rem;
+    }
+
+    .description h2 {
+        font-size: 1.5rem;
+    }
+
+    .description h3 {
+        font-size: 1.3rem;
+    }
+
 }

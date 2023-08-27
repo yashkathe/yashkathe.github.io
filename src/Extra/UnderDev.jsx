@@ -19,7 +19,7 @@ const UnderDevelopmentMessage = () => {
 	return (
 		<div className={styles["under-development-container"]}>
 			<h1>Site Under Development</h1>
-			<p>You can still visit other pages which are ready</p>
+			<p>You can visit other pages which are ready</p>
 			<div className={styles["progress-bar"]}>
 				<div
 					className={styles.progress}

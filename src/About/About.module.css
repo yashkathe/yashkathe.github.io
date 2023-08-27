@@ -5,3 +5,19 @@
 .children > div {
     margin-bottom: 10vh;
 }
+
+@media(max-width:56rem) {
+    .children {
+        margin: 8vh 2vw 0 2vw;
+    }
+}
+
+@media(max-width:28rem) {
+    .children {
+        margin: 5vh 2vw 0 2vw;
+    }
+    
+    .children > div {
+        margin-bottom: 5vh;
+    }
+}

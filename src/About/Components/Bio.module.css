@@ -3,3 +3,10 @@
     hyphens: auto;
     word-break: break-word;
 }
+
+@media(max-width:28rem) {
+    .section {
+        line-height: 1.5rem;
+    }
+
+}

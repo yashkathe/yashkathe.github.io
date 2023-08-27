@@ -37,11 +37,29 @@ const Education = () => {
 		},
 	};
 
+	const childVariantsMobile = {
+		initial: {
+			scale: 0.95,
+			opacity: 0,
+		},
+		animate: {
+			scale: 1,
+			opacity: 1,
+			transition: {
+				type: " tween",
+				duration: 0.6,
+				delay: 0.5,
+			},
+		},
+	};
+
 	return (
 		<div className={shared["section-shared-about"]}>
 			<div>
 				<motion.h3
-					variants={headingVariants}
+					variants={
+						window.innerWidth < 896 ? childVariantsMobile : headingVariants
+					}
 					initial='initial'
 					animate='animate'>
 					Education Timeline
@@ -49,7 +67,7 @@ const Education = () => {
 			</div>
 			<motion.div
 				className={styles.uni}
-				variants={childVariants}
+				variants={window.innerWidth < 896 ? childVariantsMobile : childVariants}
 				initial='initial'
 				animate='animate'>
 				<div>
