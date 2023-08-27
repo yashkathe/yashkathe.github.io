@@ -14,7 +14,7 @@ const LeftComponent = (props) => {
 			opacity: 1,
 			transition: {
 				type: " tween",
-				duration: 1,
+				duration: 0.6,
 				delay: 0.6,
 			},
 		},
@@ -30,7 +30,7 @@ const LeftComponent = (props) => {
 			opacity: 1,
 			transition: {
 				type: " tween",
-				duration: 1,
+				duration: 0.6,
 				delay: 0.6,
 			},
 		},
@@ -38,8 +38,8 @@ const LeftComponent = (props) => {
 
 	const imgVariants = {
 		initial: {
-			scale: 0.7,
-			y: 20,
+			scale: 0.9,
+			y: 5,
 			opacity: 0,
 		},
 		animate: {
@@ -48,7 +48,7 @@ const LeftComponent = (props) => {
 			opacity: 1,
 			transition: {
 				type: " tween",
-				duration: 1,
+				duration: 0.6,
 				delay: 0.6,
 			},
 		},
@@ -56,13 +56,6 @@ const LeftComponent = (props) => {
 
 	return (
 		<div className={styles.parent}>
-			<motion.div
-				className={styles.companyLogo}
-				variants={imgVariants}
-				initial='initial'
-				animate='animate'>
-				<img src={props.imageSrc}></img>
-			</motion.div>
 			<motion.div
 				className={styles.description}
 				variants={headingVariants}
@@ -73,6 +66,15 @@ const LeftComponent = (props) => {
 				<p>{props.jobDescription1}</p>
 				<p>{props.jobDescription2}</p>
 				<p>{props.jobDescription3}</p>
+			</motion.div>
+			<motion.div
+				className={styles.companyLogo}
+				variants={imgVariants}
+				initial='initial'
+				animate='animate'>
+				<a href='https://iotiot.in/' target='_blank'>
+					<img src={props.imageSrc}></img>
+				</a>
 			</motion.div>
 			<motion.div
 				className={styles.timeline}

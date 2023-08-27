@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import styles from "./Skills.module.css";
+import shared from "../Shared/shared.module.css";
 
 const Skills = () => {
 	const headingVariants = {
@@ -37,7 +38,7 @@ const Skills = () => {
 	};
 
 	return (
-		<div className={styles.section}>
+		<div className={shared["section-shared-about"]}>
 			<div>
 				<motion.h3
 					variants={headingVariants}

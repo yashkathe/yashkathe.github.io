@@ -1,0 +1,23 @@
+.section-shared-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.section-shared-about > div:first-child {
+    width: 30%;
+}
+
+.section-shared-about > div:last-child {
+    width: 70%;
+}
+
+.section-shared-about h3 {
+    font-size: 1.8rem;
+}
+
+.section-shared-about p {
+    font-size: 1.2rem;
+}

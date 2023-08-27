@@ -51,6 +51,7 @@ button[type="submit"]{
     color: #121212;
     background-color: #e8e6e3;
     transition: 200ms;
+    margin-top: 1vh;
 }
 
 button[type="submit"]:hover,

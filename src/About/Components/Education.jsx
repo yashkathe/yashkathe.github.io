@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import styles from "./Education.module.css";
+import shared from "../Shared/shared.module.css";
 
 const Education = () => {
 	const headingVariants = {
@@ -37,7 +38,7 @@ const Education = () => {
 	};
 
 	return (
-		<div className={styles.section}>
+		<div className={shared["section-shared-about"]}>
 			<div>
 				<motion.h3
 					variants={headingVariants}
@@ -53,11 +54,11 @@ const Education = () => {
 				animate='animate'>
 				<div>
 					<p>MS in Computer Engineering</p> <p>University of California</p>
-					<p>2024</p>
+					<p>2025</p>
 				</div>
 				<div></div>
 				<div>
-					<p>BE in Electronics and Telecommunication</p>{" "}
+					<p>BE in Electronics & Telecommunication</p>{" "}
 					<p>University of Mumbai</p>
 					<p>2023</p>
 				</div>

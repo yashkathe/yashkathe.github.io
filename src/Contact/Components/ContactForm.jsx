@@ -34,7 +34,7 @@ const ContactForm = () => {
 			opacity: 1,
 			transition: {
 				type: " tween",
-				duration: 1,
+				duration: 0.6,
 				delay: 0.6,
 			},
 		},

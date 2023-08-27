@@ -1,1 +1,7 @@
+.children {
+    margin: 11vh 10vw 0 2vw;
+}
 
+.children > div {
+    margin-bottom: 10vh;
+}

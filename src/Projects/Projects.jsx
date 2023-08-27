@@ -29,8 +29,8 @@ const Projects = () => {
 	};
 
 	return (
-		<div className={shared.parent}>
-			<div className={shared.header}>
+		<div className={shared["parent-shared"]}>
+			<div className={shared["header-shared"]}>
 				<motion.h1
 					variants={headingVariants}
 					initial='initial'

@@ -10,7 +10,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
 }
 
 .parentML > div:last-child {

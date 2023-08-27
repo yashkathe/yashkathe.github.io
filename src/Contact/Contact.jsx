@@ -23,8 +23,8 @@ const Contact = () => {
 		},
 	};
 	return (
-		<div className={shared.parent}>
-			<div className={shared.header}>
+		<div className={shared["parent-shared"]}>
+			<div className={shared["header-shared"]}>
 				<motion.h1
 					variants={headingVariants}
 					initial='initial'
@@ -32,7 +32,7 @@ const Contact = () => {
 					Let's Talk
 				</motion.h1>
 				<div></div>
-				<div className={styles.children}>
+				<div className={`${shared["children-shared-row"]} ${styles.children}`}>
 					<div>
 						<ContactForm />
 					</div>

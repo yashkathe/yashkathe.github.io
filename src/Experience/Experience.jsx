@@ -25,8 +25,8 @@ const Experience = () => {
 	};
 
 	return (
-		<div className={shared.parent}>
-			<div className={shared.header}>
+		<div className={shared["parent-shared"]}>
+			<div className={shared["header-shared"]}>
 				<motion.h1
 					variants={headingVariants}
 					initial='initial'
@@ -34,16 +34,18 @@ const Experience = () => {
 					My Work Experience
 				</motion.h1>
 				<div></div>
-				<div className={shared.children}>
-					<LeftComponent
-						imageSrc={iotiot}
-						jobTitle='Linux Software Engineer'
-						company='IotIot.in'
-						jobDescription1='• Worked on the “Brainy PI” project which seeks to solve the worldwide raspberry Pi scarcity. Wrote bash scripts for installing packages and automated the process of testing the os.'
-						jobDescription2='• Used Whiptail and tools such as sed, awk, cut and tr to add functionality to a command line interface tool to change screen resolution, adding camera support, enabling and disabling UART, One Wire Interface, and VNC.'
-						jobDescription3='• Worked with Clustering Team to create docker swarms to deploy applications and wrote a script using ansible to backup and restore the whole docker swarm in case the whole cluster fails.'
-						timeline='August 2022 - December 2022'
-					/>
+				<div className={`${shared["children-shared"]} ${styles.children}`}>
+					<div>
+						<LeftComponent
+							imageSrc={iotiot}
+							jobTitle='Linux Software Engineer'
+							company='IotIot.in'
+							jobDescription1='• Worked on the “Brainy PI” project which seeks to solve the worldwide raspberry Pi scarcity. Wrote bash scripts for installing packages and automated the process of testing the os.'
+							jobDescription2='• Used Whiptail and tools such as sed, awk, cut and tr to add functionality to a command line interface tool to change screen resolution, adding camera support, enabling and disabling UART, One Wire Interface, and VNC.'
+							jobDescription3='• Worked with Clustering Team to create docker swarms to deploy applications and wrote a script using ansible to backup and restore the whole docker swarm in case the whole cluster fails.'
+							timeline='August 2022 - December 2022'
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
