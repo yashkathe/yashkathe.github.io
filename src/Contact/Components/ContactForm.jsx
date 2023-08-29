@@ -1,27 +1,53 @@
-import React, { useRef } from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "emailjs-com";
+
+import CustomNotification from "../../Shared/Notification/CustomNotification";
+import Spinner from "../../Shared/Spinner/Spinner";
 
 import styles from "./ContactForm.module.css";
 
+const templateID = import.meta.env.VITE_API_EMAILJS_TEMPLATE;
+const serviceID = import.meta.env.VITE_API_EMAILJS_SERVICE;
+const publicKey = import.meta.env.VITE_API_EMAILJS_KEY;
+
 const ContactForm = () => {
-	const templateID = import.meta.env.VITE_API_EMAILJS_TEMPLATE;
-	const serviceID = import.meta.env.VITE_API_EMAILJS_SERVICE;
-	const publicKey = import.meta.env.VITE_API_EMAILJS_KEY;
+	const [isVisible, setIsVisible] = useState(false);
+	const [message, setMessage] = useState();
+	const [isLoading, setIsLoading] = useState(false);
 
-	const form = useRef();
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setIsVisible(false);
+		}, 3000);
 
-	const handleSubmit = (event) => {
+		return () => clearTimeout(timeout);
+	}, [isVisible]);
+
+	const formElement = useRef();
+
+	const handleSubmit = async (event) => {
 		event.preventDefault();
-
-		emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
-			(result) => {
-				console.log(result.text);
-			},
-			(error) => {
-				console.log(error.text);
-			}
-		);
+		setIsLoading(true);
+		try {
+			const result = await emailjs.sendForm(
+				serviceID,
+				templateID,
+				formElement.current,
+				publicKey
+			);
+			console.log(result);
+			result.status === 200
+				? setMessage("Email Sent Successfully")
+				: setMessage(result.text);
+			setIsLoading(false);
+			setIsVisible(true);
+			formElement.current.reset();
+		} catch (error) {
+			setIsLoading(false);
+			setIsVisible(true);
+			setMessage("Something went wrong");
+		}
 	};
 
 	const childVariants = {
@@ -57,34 +83,34 @@ const ContactForm = () => {
 	};
 
 	return (
-		<motion.div
-			variants={window.innerWidth < 896 ? childVariantsMobile : childVariants}
-			ref={form}
-			initial='initial'
-			animate='animate'>
-			<form className={styles.form} onSubmit={handleSubmit}>
-				<div>
-					<input
-						type='text'
-						name='user_name'
-						placeholder='Name'
-						minLength='4'
-					/>
-					<input type='email' name='user_email' placeholder='Email' />
-				</div>
-				<div>
-					<textarea
-						name='message'
-						placeholder='Message'
-						rows='10'
-						minLength='10'
-						column='100%'></textarea>
-				</div>
-				<div>
-					<button type='submit'>Submit</button>
-				</div>
-			</form>
-		</motion.div>
+		<>
+			<motion.div
+				variants={window.innerWidth < 896 ? childVariantsMobile : childVariants}
+				initial='initial'
+				animate='animate'>
+				<form className={styles.form} onSubmit={handleSubmit} ref={formElement}>
+					<div>
+						<input type='text' name='name' placeholder='Name' minLength='4' />
+						<input type='email' name='email' placeholder='Email' />
+					</div>
+					<div>
+						<textarea
+							name='message'
+							placeholder='Message'
+							rows='10'
+							minLength='10'
+							column='100%'></textarea>
+					</div>
+					<div>
+						<button type='submit'>Submit</button>
+					</div>
+				</form>
+			</motion.div>
+			<AnimatePresence>
+				{isVisible && <CustomNotification>{message}</CustomNotification>}
+			</AnimatePresence>
+			{isLoading && <Spinner />}
+		</>
 	);
 };
 

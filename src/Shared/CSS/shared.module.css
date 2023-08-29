@@ -55,5 +55,7 @@
 @media(max-width:28rem) {
     .header-shared>h1 {
         font-size: 1.8rem;
+        margin-top: 1vh ;
+        font-weight: 600;
     }
 }
