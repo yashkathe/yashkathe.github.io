@@ -22,7 +22,7 @@
 
 input[type='text'],
 input[type='email'] {
-    width: 100%;
+    width: 15vw;
     margin-bottom: 4%;
     height: 4vh;
     background-color: #121212;
@@ -65,10 +65,12 @@ button[type="submit"]:active {
     transition: 200ms;
 }
 
-/* @media(max-width:56rem) {
-   
-} */
+@media(max-width:56rem) {
+    input[type='text'],
+    input[type='email'] {
+        width: 100%;
+    }  
+}
 
 /* @media(max-width:28rem) {
-
 } */
