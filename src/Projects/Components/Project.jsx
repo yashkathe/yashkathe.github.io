@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { motion } from "framer-motion";
 
@@ -6,55 +6,12 @@ import styles from "./Project.module.css";
 
 import arrowRight from "/Icons/arrow-right.png";
 
+import VarientStore from "../../Store/VarientStore";
+
 const Project = (props) => {
 	const [hover, setHover] = useState();
 
-	const parentVariants = {
-		initial: {
-			scale: 0.7,
-			y: 20,
-			opacity: 0,
-		},
-		animate: {
-			scale: 1,
-			y: 0,
-			opacity: 1,
-			transition: {
-				type: " tween",
-				duration: 1,
-				delay: props.delay,
-			},
-		},
-	};
-
-	const descVariants = {
-		initial: {
-			y: 50,
-			opacity: 0,
-		},
-		animate: {
-			y: 0,
-			opacity: 1,
-			transition: {
-				type: " tween",
-				duration: 0.5,
-			},
-		},
-	};
-
-	const iconVariants = {
-		initial: {
-			rotate: 0,
-		},
-		animate: {
-			rotate: -45,
-			transition: {
-				type: " tween",
-				duration: 0.38,
-				delay: 0.2,
-			},
-		},
-	};
+	const variantsCtx = useContext(VarientStore);
 
 	const mobileVariants = {
 		initial: {
@@ -75,7 +32,7 @@ const Project = (props) => {
 	return (
 		<motion.div
 			className={styles.parent}
-			variants={window.innerWidth < 896 ? mobileVariants : mobileVariants}
+			variants={mobileVariants}
 			initial='initial'
 			animate='animate'
 			onMouseEnter={() => {
@@ -99,14 +56,14 @@ const Project = (props) => {
 				{hover && (
 					<motion.div
 						className={styles.description}
-						variants={descVariants}
+						variants={variantsCtx.slideUp}
 						initial='initial'
 						animate='animate'>
 						<p>{props.description}</p>
 						<div className={styles.icon}>
 							<motion.img
 								src={arrowRight}
-								variants={iconVariants}
+								variants={variantsCtx.rotateBy45}
 								initial='initial'
 								animate='animate'
 							/>

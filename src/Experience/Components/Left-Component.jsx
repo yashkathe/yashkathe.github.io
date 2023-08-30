@@ -1,80 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./Left-Component.module.css";
 
+import VarientStore from "../../Store/VarientStore";
+
 const LeftComponent = (props) => {
-	const headingVariants = {
-		initial: {
-			x: "-2vw",
-			opacity: 0,
-		},
-		animate: {
-			x: 0,
-			opacity: 1,
-			transition: {
-				type: " tween",
-				duration: 0.6,
-				delay: 0.6,
-			},
-		},
-	};
-
-	const childVariants = {
-		initial: {
-			x: "2vw",
-			opacity: 0,
-		},
-		animate: {
-			x: 0,
-			opacity: 1,
-			transition: {
-				type: " tween",
-				duration: 0.6,
-				delay: 0.6,
-			},
-		},
-	};
-
-	const imgVariants = {
-		initial: {
-			scale: 0.9,
-			y: 5,
-			opacity: 0,
-		},
-		animate: {
-			scale: 1,
-			y: 0,
-			opacity: 1,
-			transition: {
-				type: " tween",
-				duration: 0.6,
-				delay: 0.6,
-			},
-		},
-	};
-
-	const mobileVariants = {
-		initial: {
-			scale: 0.95,
-			opacity: 0,
-		},
-		animate: {
-			scale: 1,
-			opacity: 1,
-			transition: {
-				type: " tween",
-				duration: 0.6,
-				delay: 0.5,
-			},
-		},
-	};
+	const variantsCtx = useContext(VarientStore);
 
 	return (
 		<div className={styles.parent}>
 			<motion.div
 				className={styles.description}
-				variants={window.innerWidth < 896 ? mobileVariants : headingVariants}
+				variants={
+					window.innerWidth < 896
+						? variantsCtx.mobilePop
+						: variantsCtx.leftSlideIn
+				}
 				initial='initial'
 				animate='animate'>
 				<h2>{props.jobTitle}</h2>
@@ -88,7 +30,7 @@ const LeftComponent = (props) => {
 			</motion.div>
 			<motion.div
 				className={styles.companyLogo}
-				variants={window.innerWidth < 896 ? mobileVariants : imgVariants}
+				variants={variantsCtx.imgPopExperience}
 				initial='initial'
 				animate='animate'>
 				<a href='https://iotiot.in/' target='_blank'>
@@ -97,7 +39,11 @@ const LeftComponent = (props) => {
 			</motion.div>
 			<motion.div
 				className={styles.timeline}
-				variants={window.innerWidth < 896 ? mobileVariants : childVariants}
+				variants={
+					window.innerWidth < 896
+						? variantsCtx.mobilePop
+						: variantsCtx.rightSlideIn
+				}
 				initial='initial'
 				animate='animate'>
 				<p>{props.timeline}</p>
