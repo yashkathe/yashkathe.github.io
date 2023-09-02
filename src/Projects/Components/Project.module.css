@@ -5,10 +5,6 @@
     position: relative;
 }
 
-.parent:hover {
-    cursor: pointer;
-}
-
 .pcImg {
     position: absolute;
     left: 50%;
@@ -69,9 +65,13 @@
     z-index: 1;
 }
 
-.icon>img {
+.icon img {
     height: auto;
     width: 100%;
+}
+
+.icon img:hover{
+    cursor: pointer;
 }
 
 @media(max-width:56rem) {

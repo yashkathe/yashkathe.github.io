@@ -36,41 +36,50 @@ const Project = (props) => {
 			initial='initial'
 			animate='animate'
 			onMouseEnter={() => {
-				setHover(true);
+				if (window.innerWidth > 896) {
+					setHover(true);
+				}
 			}}
 			onMouseLeave={() => {
-				setHover(false);
+				if (window.innerWidth > 896) {
+					setHover(false);
+				}
+			}}
+			onClick={() => {
+				if (window.innerWidth < 896) {
+					setHover((prev) => !prev);
+				}
 			}}>
-			<a href={props.href} target='_blank'>
-				<div className={props.mobile ? styles.mobileImg : styles.pcImg}>
-					<motion.img
-						src={props.src}
-						alt={props.alt}
-						animate={
-							hover
-								? { scale: 1.1, transition: { type: "tween", duration: 0.5 } }
-								: {}
-						}
-					/>
-				</div>
-				{hover && (
-					<motion.div
-						className={styles.description}
-						variants={variantsCtx.slideUp}
-						initial='initial'
-						animate='animate'>
-						<p>{props.description}</p>
-						<div className={styles.icon}>
+			<div className={props.mobile ? styles.mobileImg : styles.pcImg}>
+				<motion.img
+					src={props.src}
+					alt={props.alt}
+					animate={
+						hover
+							? { scale: 1.1, transition: { type: "tween", duration: 0.5 } }
+							: {}
+					}
+				/>
+			</div>
+			{hover && (
+				<motion.div
+					className={styles.description}
+					variants={variantsCtx.slideUp}
+					initial='initial'
+					animate='animate'>
+					<p>{props.description}</p>
+					<div className={styles.icon}>
+						<a href={props.href} target='_blank'>
 							<motion.img
 								src={arrowRight}
 								variants={variantsCtx.rotateBy45}
 								initial='initial'
 								animate='animate'
 							/>
-						</div>
-					</motion.div>
-				)}
-			</a>
+						</a>
+					</div>
+				</motion.div>
+			)}
 			<div className={styles.projectTitle}>
 				<h1>{props.projectTitle}</h1>
 			</div>
