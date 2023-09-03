@@ -6,7 +6,3 @@
     width: 100%;
 }
 
-.skills>div:nth-child(even) {
-    border: 1px solid #e8e6e3;
-    width: 100%;
-}

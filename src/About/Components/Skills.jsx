@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./Skills.module.css";
@@ -10,22 +10,6 @@ import VarientStore from "../../Store/VarientStore";
 
 const Skills = () => {
 	const variantsCtx = useContext(VarientStore);
-
-	const [webClick, setWebClick] = useState(false);
-	const [skillsClick, setSkillsClick] = useState(false);
-	const [dbClick, setDbClick] = useState(false);
-
-	const expand1 = () => {
-		setWebClick((prev) => !prev);
-	};
-
-	const expand2 = () => {
-		setSkillsClick((prev) => !prev);
-	};
-
-	const expand3 = () => {
-		setDbClick((prev) => !prev);
-	};
 
 	return (
 		<div className={shared["section-shared-about"]}>
@@ -53,24 +37,12 @@ const Skills = () => {
 					<Skill
 						title='Web Development'
 						skillSet='• HTML • CSS • Javascript • Typescript • NodeJS • ReactJS'
-						expand={expand1}
-						click={webClick}
 					/>
-					<div></div>
-					<Skill
-						title='Programming'
-						skillSet='• C • C++ • Python • Bash'
-						expand={expand2}
-						click={skillsClick}
-					/>
-					<div></div>
+					<Skill title='Programming' skillSet='• C • C++ • Python • Bash' />
 					<Skill
 						title='Devops and Databases'
 						skillSet='• Git • Github Actions • Linux • Docker • Ansible • AWS • SQL • MongoDB'
-						expand={expand3}
-						click={dbClick}
 					/>
-					<div></div>
 				</div>
 			</motion.div>
 		</div>
