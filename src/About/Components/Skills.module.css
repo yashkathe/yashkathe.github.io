@@ -1,6 +1,6 @@
 .skills>div:nth-child(odd) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
@@ -19,3 +19,60 @@
     width: 70%;
 }
 
+.skillsHeading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.skillsHeading:hover {
+    cursor: pointer;
+}
+
+
+.skillsHeading>p,
+.skillsHeading>.img {
+    width: 50%;
+}
+
+.skillsHeading>p {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.skillsHeading>.img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img {
+    height: 1.8rem;
+    transition: 1s;
+}
+
+.imgRotate {
+    transform: rotateX(180deg);
+    transform-origin: center;
+    transition: 500ms;
+}
+
+.img>img {
+    width: auto;
+    height: 100%;
+}
+
+.show {
+    max-height: 1000px;
+    opacity: 1;
+    transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.hide {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+}

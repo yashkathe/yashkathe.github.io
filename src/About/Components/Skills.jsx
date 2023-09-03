@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./Skills.module.css";
@@ -6,8 +6,26 @@ import shared from "../Shared/shared.module.css";
 
 import VarientStore from "../../Store/VarientStore";
 
+import upArrow from "/Icons/arrow-up.png";
+
 const Skills = () => {
 	const variantsCtx = useContext(VarientStore);
+
+	const [webClick, setWebClick] = useState(false);
+	const [skillsClick, setSkillsClick] = useState(false);
+	const [dbClick, setDbClick] = useState(false);
+
+	const expand1 = () => {
+		setWebClick((prev) => !prev);
+	};
+
+	const expand2 = () => {
+		setSkillsClick((prev) => !prev);
+	};
+
+	const expand3 = () => {
+		setDbClick((prev) => !prev);
+	};
 
 	return (
 		<div className={shared["section-shared-about"]}>
@@ -33,18 +51,46 @@ const Skills = () => {
 				animate='animate'>
 				<div className={styles.skills}>
 					<div>
-						<p>Web Development:</p>
-						<p>HTML, CSS, Javascript, Typescript, NodeJS, ReactJS</p>
+						<div className={styles.skillsHeading} onClick={expand1}>
+							<p>Web Development</p>
+							<div
+								className={`${styles.img} ${webClick ? styles.imgRotate : ""}`}>
+								<img src={upArrow} alt='arrow' />
+							</div>
+						</div>
+						<div className={`${webClick ? styles.show : styles.hide}`}>
+							<p>HTML, CSS, Javascript, Typescript, NodeJS, ReactJS</p>
+						</div>
 					</div>
 					<div></div>
 					<div>
-						<p>Programming:</p>
-						<p>C, C++, Python, Bash</p>
+						<div className={styles.skillsHeading} onClick={expand2}>
+							<p>Programming</p>
+							<div
+								className={`${styles.img} ${
+									skillsClick ? styles.imgRotate : ""
+								}`}>
+								<img src={upArrow} alt='arrow' />
+							</div>
+						</div>
+						<div className={`${skillsClick ? styles.show : styles.hide}`}>
+							<p> C, C++, Python, Bash</p>
+						</div>
 					</div>
 					<div></div>
 					<div>
-						<p>DevOps and Databases:</p>
-						<p>Git, Github Actions, Linux, Docker, Ansible, SQL, MongoDB</p>
+						<div className={styles.skillsHeading} onClick={expand3}>
+							<p>DevOps and Database</p>
+							<div
+								className={`${styles.img} ${dbClick ? styles.imgRotate : ""}`}>
+								<img src={upArrow} alt='arrow' />
+							</div>
+						</div>
+						<div className={`${dbClick ? styles.show : styles.hide}`}>
+							<p>
+								Git, Github Actions, Linux, Docker, Ansible, AWS, SQL, MongoDB{" "}
+							</p>
+						</div>
 					</div>
 					<div></div>
 				</div>
