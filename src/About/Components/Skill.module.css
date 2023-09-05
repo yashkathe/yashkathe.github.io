@@ -1,3 +1,7 @@
+.parent{
+    margin-bottom: 3px;
+}
+
 .skillsHeading {
     display: flex;
     flex-direction: row;
@@ -47,6 +51,7 @@
     opacity: 1;
     transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
     overflow: hidden;
+    text-align: center;
 }
 
 .hide {
@@ -54,6 +59,7 @@
     opacity: 0;
     transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
     overflow: hidden;
+    text-align: center;
 }
 
 .line {

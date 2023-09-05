@@ -8,7 +8,7 @@ const Skill = (props) => {
 	const [clicked, setClicked] = useState(false);
 
 	return (
-		<div>
+		<div className={styles.parent}>
 			<div
 				className={styles.skillsHeading}
 				onClick={() => {
