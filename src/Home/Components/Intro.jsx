@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+
+import VarientStore from "../../Store/VarientStore";
 
 import styles from "./Intro.module.css";
 
 const Intro = () => {
+	const variantsCtx = useContext(VarientStore);
+
 	const [text] = useTypewriter({
 		words: [
 			"I'm a MERN stack developer, passionate about crafting web applications",
@@ -19,13 +24,21 @@ const Intro = () => {
 	});
 
 	return (
-		<div className={styles.parent}>
+		<motion.div
+			className={styles.parent}
+			variants={
+				window.innerWidth < 896
+					? variantsCtx.mobilePop
+					: variantsCtx.leftSlideIn
+			}
+			initial='initial'
+			animate='animate'>
 			<h1>Hello, I'm Yash Kathe</h1>
 			<p>
 				{text}
 				<Cursor cursorColor='#e4e3e3' />
 			</p>
-		</div>
+		</motion.div>
 	);
 };
 

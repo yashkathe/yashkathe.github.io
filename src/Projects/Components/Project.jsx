@@ -24,7 +24,7 @@ const Project = (props) => {
 			transition: {
 				type: " tween",
 				duration: 0.6,
-				delay: props.delay,
+				delay: 0.8,
 			},
 		},
 	};
