@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import styles from "./Project.module.css";
 
@@ -61,25 +61,28 @@ const Project = (props) => {
 					}
 				/>
 			</div>
-			{hover && (
-				<motion.div
-					className={styles.description}
-					variants={variantsCtx.slideUp}
-					initial='initial'
-					animate='animate'>
-					<p>{props.description}</p>
-					<div className={styles.icon}>
-						<a href={props.href} target='_blank'>
-							<motion.img
-								src={arrowRight}
-								variants={variantsCtx.rotateBy45}
-								initial='initial'
-								animate='animate'
-							/>
-						</a>
-					</div>
-				</motion.div>
-			)}
+			<AnimatePresence>
+				{hover && (
+					<motion.div
+						className={styles.description}
+						variants={variantsCtx.slideUp}
+						initial='initial'
+						animate='animate'
+                        exit='initial'>
+						<p>{props.description}</p>
+						<div className={styles.icon}>
+							<a href={props.href} target='_blank'>
+								<motion.img
+									src={arrowRight}
+									variants={variantsCtx.rotateBy45}
+									initial='initial'
+									animate='animate'
+								/>
+							</a>
+						</div>
+					</motion.div>
+				)}
+			</AnimatePresence>
 			<div className={styles.projectTitle}>
 				<h1>{props.projectTitle}</h1>
 			</div>
