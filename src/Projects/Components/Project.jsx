@@ -68,7 +68,7 @@ const Project = (props) => {
 						variants={variantsCtx.slideUp}
 						initial='initial'
 						animate='animate'
-                        exit='initial'>
+						exit='exit'>
 						<p>{props.description}</p>
 						<div className={styles.icon}>
 							<a href={props.href} target='_blank'>

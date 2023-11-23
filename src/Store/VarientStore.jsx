@@ -113,6 +113,14 @@ const VarientStore = React.createContext({
 				duration: 0.5,
 			},
 		},
+		exit: {
+			y: 50,
+			opacity: 0,
+			transition: {
+				type: " tween",
+				duration: 0.5,
+			},
+		},
 	},
 });
 
