@@ -7,6 +7,7 @@ import shared from "../Shared/CSS/shared.module.css";
 import Project from "./Components/Project";
 
 import commuteConnnect from "/Projects/commute-connect.gif";
+import chatBot from "/Projects/chat-bot.gif";
 import f1 from "/Projects/f1-api.png";
 import comics from "/Projects/comics-api.png";
 import archScripts from "/Projects/arch-linux-scripts.png";
@@ -38,6 +39,18 @@ const Projects = () => {
 							href='https://github.com/yashkathe/Commute-Connect'
 							description='Commute Connect is a MERN stack application that effortlessly links travelers with similar itineraries, 
                             allowing them to seamlessly find companions for shared journeys and make their travel experiences more cost-effective.'
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={chatBot}
+							alt='Chat Bot'
+							projectTitle='Chat Bot powered by GPT 3.5 Turbo'
+							mobile={false}
+							href='https://github.com/yashkathe/AI-Chat-Bot-MERN'
+							description='Developed a secure and scalable chatbot application using the MERN stack with TypeScript, incorporating user authentication, 
+                            JSON Web Tokens, and HTTP cookies for seamless and authenticated communication within the platform.'
 						/>
 					</div>
 					<div>
