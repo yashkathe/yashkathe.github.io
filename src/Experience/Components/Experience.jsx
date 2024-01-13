@@ -21,7 +21,7 @@ const Experience = (props) => {
 				initial='initial'
 				animate='animate'>
 				<h2>{props.jobTitle}</h2>
-				<a href='https://iotiot.in/' target='_blank'>
+				<a href={props.company_href} target='_blank'>
 					<h3>{props.company}</h3>
 				</a>
 				<p className={styles.mobileTimeline}>({props.timeline})</p>
@@ -34,7 +34,7 @@ const Experience = (props) => {
 				variants={variantsCtx.imgPopExperience}
 				initial='initial'
 				animate='animate'>
-				<a href='https://iotiot.in/' target='_blank'>
+				<a href={props.company_href} target='_blank'>
 					<img src={props.imageSrc}></img>
 				</a>
 			</motion.div>
