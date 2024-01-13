@@ -6,7 +6,7 @@ import Header from "./Shared/Header";
 import Socials from "./Shared/Socials";
 import Home from "./Home/Home";
 import Projects from "./Projects/Projects";
-import Experience from "./Experience/Experience";
+import Experiences from "./Experience/Experiences";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
 
@@ -21,7 +21,7 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/projects' element={<Projects />} />
-					<Route path='/experience' element={<Experience />} />
+					<Route path='/experience' element={<Experiences />} />
 					<Route path='/about' element={<About />} />
 					<Route path='/contact' element={<Contact />} />
 				</Routes>

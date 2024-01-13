@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
-import styles from "./Left-Component.module.css";
+import styles from "./Experience.module.css";
 
 import VarientStore from "../../Store/VarientStore";
 
-const LeftComponent = (props) => {
+const Experience = (props) => {
 	const variantsCtx = useContext(VarientStore);
+	console.log(props.flip);
 
 	return (
-		<div className={styles.parent}>
+		<div className={`${props.flip ? styles.parent : styles.parentFlip}`}>
 			<motion.div
 				className={styles.description}
 				variants={
@@ -52,4 +53,4 @@ const LeftComponent = (props) => {
 	);
 };
 
-export default LeftComponent;
+export default Experience;
