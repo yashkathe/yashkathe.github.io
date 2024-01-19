@@ -7,7 +7,6 @@ import VarientStore from "../../Store/VarientStore";
 
 const Experience = (props) => {
 	const variantsCtx = useContext(VarientStore);
-	console.log(props.flip);
 
 	return (
 		<div className={`${props.flip ? styles.parent : styles.parentFlip}`}>
@@ -16,7 +15,9 @@ const Experience = (props) => {
 				variants={
 					window.innerWidth < 896
 						? variantsCtx.mobilePop
-						: variantsCtx.leftSlideIn
+						: props.flip
+						? variantsCtx.leftSlideIn
+						: variantsCtx.rightSlideIn
 				}
 				initial='initial'
 				animate='animate'>
@@ -39,11 +40,13 @@ const Experience = (props) => {
 				</a>
 			</motion.div>
 			<motion.div
-				className={styles.timeline}
+				className={props.flip ? `${styles.timeline} ${styles.timeline_flip}` : styles.timeline}
 				variants={
 					window.innerWidth < 896
 						? variantsCtx.mobilePop
-						: variantsCtx.rightSlideIn
+						: props.flip
+						? variantsCtx.rightSlideIn
+						: variantsCtx.leftSlideIn
 				}
 				initial='initial'
 				animate='animate'>
