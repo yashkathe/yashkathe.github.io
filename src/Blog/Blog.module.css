@@ -1,0 +1,15 @@
+.parent {
+	height: 70vh;
+	width: 100%;
+	text-align: center;
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #e4e3e3;
+    font-size: 2rem;
+}
+
+.parent > img{
+    height: 10rem;
+}

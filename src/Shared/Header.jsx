@@ -38,6 +38,7 @@ const Header = () => {
 			<ul>
 				<FMLink to='/'>Home</FMLink>
 				<FMLink to='/projects'> Projects </FMLink>
+				<FMLink to='/blog'> Blog </FMLink>
 				<FMLink to='/experience'> Experience </FMLink>
 				<FMLink to='/about'> About </FMLink>
 				<FMLink to='/contact'> Contact </FMLink>
