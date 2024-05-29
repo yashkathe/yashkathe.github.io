@@ -1,44 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
+import { motion } from "framer-motion";
 
 import styles from "./About.module.css";
 import shared from "../Shared/CSS/shared.module.css";
-
-import { motion } from "framer-motion";
 
 import Bio from "./Components/Bio";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
 
+import VarientStore from "../Store/VarientStore";
+
 const About = () => {
-	const headingVariants = {
-		initial: {
-			x: "-2vw",
-			opacity: 0,
-		},
-		animate: {
-			x: 0,
-			opacity: 1,
-			transition: {
-				type: " tween",
-				duration: 0.8,
-			},
-		},
-	};
+	const variantsCtx = useContext(VarientStore);
 
 	return (
-		<div className={shared.parent}>
-			<div className={shared.header}>
+		<div className={shared["parent-shared"]}>
+			<div className={shared["header-shared"]}>
 				<motion.h1
-					variants={headingVariants}
+					variants={variantsCtx.pageTitleVariant}
 					initial='initial'
 					animate='animate'>
 					About Me
 				</motion.h1>
 				<div></div>
 			</div>
-			<Bio />
-			<Education />
-			<Skills />
+			<div className={styles["children"]}>
+				<div>
+					<Bio />
+				</div>
+				<div>
+					<Education />
+				</div>
+				<div>
+					<Skills />
+				</div>
+			</div>
 		</div>
 	);
 };

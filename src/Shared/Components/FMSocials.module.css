@@ -1,5 +1,7 @@
-.parent {
-    height: 7vh;
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .parent>div {
@@ -31,4 +33,10 @@
 .parent img {
     height: 100%;
     width: 100%;
+}
+
+@media(max-width:28rem) {
+    .link {
+        display: none;
+    }
 }

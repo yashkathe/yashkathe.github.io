@@ -37,6 +37,7 @@ const Header = () => {
 			</motion.div>
 			<ul>
 				<FMLink to='/'>Home</FMLink>
+				<FMLink to='/blog'> Blog </FMLink>
 				<FMLink to='/projects'> Projects </FMLink>
 				<FMLink to='/experience'> Experience </FMLink>
 				<FMLink to='/about'> About </FMLink>

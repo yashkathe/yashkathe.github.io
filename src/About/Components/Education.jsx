@@ -1,46 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./Education.module.css";
+import shared from "../Shared/shared.module.css";
+
+import VarientStore from "../../Store/VarientStore";
 
 const Education = () => {
-	const headingVariants = {
-		initial: {
-			x: "-2vw",
-			opacity: 0,
-		},
-		animate: {
-			x: 0,
-			opacity: 1,
-			transition: {
-				type: " tween",
-				duration: 1,
-				delay: 0.6,
-			},
-		},
-	};
-
-	const childVariants = {
-		initial: {
-			x: "2vw",
-			opacity: 0,
-		},
-		animate: {
-			x: 0,
-			opacity: 1,
-			transition: {
-				type: " tween",
-				duration: 1,
-				delay: 0.6,
-			},
-		},
-	};
+	const variantsCtx = useContext(VarientStore);
 
 	return (
-		<div className={styles.section}>
+		<div className={shared["section-shared-about"]}>
 			<div>
 				<motion.h3
-					variants={headingVariants}
+					variants={
+						window.innerWidth < 896
+							? variantsCtx.mobilePop
+							: variantsCtx.leftSlideIn
+					}
 					initial='initial'
 					animate='animate'>
 					Education Timeline
@@ -48,16 +25,20 @@ const Education = () => {
 			</div>
 			<motion.div
 				className={styles.uni}
-				variants={childVariants}
+				variants={
+					window.innerWidth < 896
+						? variantsCtx.mobilePop
+						: variantsCtx.rightSlideIn
+				}
 				initial='initial'
 				animate='animate'>
 				<div>
 					<p>MS in Computer Engineering</p> <p>University of California</p>
-					<p>2024</p>
+					<p>2025</p>
 				</div>
 				<div></div>
 				<div>
-					<p>BE in Electronics and Telecommunication</p>{" "}
+					<p>BE in Electronics & Telecommunication</p>{" "}
 					<p>University of Mumbai</p>
 					<p>2023</p>
 				</div>

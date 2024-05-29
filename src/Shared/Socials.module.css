@@ -5,12 +5,13 @@
     justify-content: center;
     position: fixed;
     right: 1vw;
-    top: 50vh;
+    top: 40vh;
+    height: fit-content;
     transform: translate(0%, -10%)
 }
 
-.parent>div {
-    margin-bottom: 1rem;
+.parent > * {
+    padding: 0.5rem;
 }
 
 @media(max-width:56rem) {

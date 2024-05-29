@@ -1,0 +1,16 @@
+.parent {
+    position: fixed;
+    bottom: 2.5vh;
+    right: 2.5vw;
+    background-color: #121212;
+    height: auto;
+    width: auto;
+    padding: 5px 1vw;
+    border: 1px solid #e8e6e3;
+}
+
+.parent>p {
+    margin: 0;
+    color: #e8e6e3;
+    font-size: 1rem;
+}

@@ -5,11 +5,7 @@
     position: relative;
 }
 
-.parent:hover{
-    cursor: pointer;
-}
-
-.pcImg{
+.pcImg {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -17,12 +13,12 @@
     transform: translate(-50%, -50%)
 }
 
-.pcImg > img {
+.pcImg>img {
     height: auto;
     width: 100%;
 }
 
-.mobileImg{
+.mobileImg {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -32,49 +28,62 @@
     justify-content: center;
 }
 
-.mobileImg > img {
+.mobileImg>img {
     height: 100%;
     width: auto;
 }
 
-.projectTitle{
+.projectTitle {
     position: relative;
-    bottom: -102%;
+    bottom: -104%;
     left: 2%;
 }
 
-.projectTitle h1{
+.projectTitle h1 {
     margin: 0;
     font-size: 1.5rem;
 }
 
-.description{
+.description {
     z-index: 1;
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 5%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     display: flex;
     flex-direction: column;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
-.icon{
+.icon {
     z-index: 1;
 }
 
-.icon > img {
+.icon img {
     height: auto;
     width: 100%;
 }
 
+.icon img:hover{
+    cursor: pointer;
+}
+
 @media(max-width:56rem) {
-    .projectTitle h1{
+    .projectTitle h1 {
         margin: 0;
         font-size: 1.2rem;
+    }
+}
+
+@media(max-width:28rem) {
+    .description {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
     }
 }

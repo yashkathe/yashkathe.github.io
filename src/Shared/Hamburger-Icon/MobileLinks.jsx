@@ -8,6 +8,8 @@ import FMSocials from "../Components/FMSocials";
 import linkedin from "/Icons/linkedin.svg";
 import github from "/Icons/github.svg";
 import leetcode from "/Icons/leetcode-3.png";
+import npm from "/Icons/npm-3.png"
+import docker from "/Icons/docker-3.png"
 
 import styles from "./MobileLinks.module.css";
 
@@ -55,7 +57,7 @@ const MobileLinks = (props) => {
 					Contact
 				</FMLink>
 			</div>
-			<div>
+			<div className={styles.socialLinks}>
 				<FMSocials
 					isMobile={true}
 					alt='linkedin'
@@ -74,6 +76,18 @@ const MobileLinks = (props) => {
 					src={leetcode}
 					href='https://leetcode.com/yashkathe/'
 				/>
+                <FMSocials
+                    isMobile={true}
+                    alt='npm'
+                    src={npm}
+                    href='https://www.npmjs.com/~yashkathe'
+                />
+                <FMSocials
+                    isMobile={true}
+                    alt='docker'
+                    src={docker}
+                    href='https://hub.docker.com/u/katheyash'
+                />
 			</div>
 		</motion.div>
 	);
