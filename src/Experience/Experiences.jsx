@@ -44,7 +44,7 @@ const Experiences = () => {
 						company_href="https://acm.cs.ucr.edu/"
                         jobDescription1="• Working closely with the team to develop 'R-Jobs' website, UC Riverside's official platform connecting students with on-campus job opportunities posted by various departments within the university"
 						jobDescription2='• Leading the team in translating Figma designs into a responsive web application using Tailwind CSS and Next.js, fostering collaboration through GitHub to ensure a smooth development process'
-						timeline='January 2024 - March 2024'
+						timeline='January 2024 - Present'
 					/>
 				</div>
 			</div>
