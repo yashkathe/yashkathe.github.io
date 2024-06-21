@@ -12,6 +12,7 @@ import f1 from "/Projects/f1-api.png";
 import comics from "/Projects/comics-api.png";
 import archScripts from "/Projects/arch-linux-scripts.png";
 import libPortal from "/Projects/las.png";
+import gpuanalysis from "/Projects/gpu-numba-proj.png"
 
 import VarientStore from "../Store/VarientStore";
 
@@ -51,6 +52,19 @@ const Projects = () => {
 							href='https://github.com/yashkathe/AI-Chat-Bot-MERN'
 							description='Developed a secure and scalable chatbot application using the MERN stack with TypeScript, incorporating user authentication, 
                             JSON Web Tokens, and HTTP cookies for seamless and authenticated communication within the platform.'
+						/>
+					</div>
+                    <div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={gpuanalysis}
+							alt='CPU vs GPU analysis'
+							projectTitle='Runtime Analysis for Image Denoising on CPU and GPU'
+							mobile={false}
+							href='https://github.com/yashkathe/Image-Noise-reduction-with-CUDA'
+							description='Performed comprehensive analysis of image denoising technique - median blur, 
+                            comparing GPU-accelerated (Numba) and CPU-based (OpenCV) processing speeds. Using diverse images, 
+                            the project applies median filtering to assess efficiency providing insights into the practical impacts of hardware acceleration'
 						/>
 					</div>
 					<div>
