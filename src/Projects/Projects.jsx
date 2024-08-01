@@ -12,7 +12,9 @@ import f1 from "/Projects/f1-api.png";
 import comics from "/Projects/comics-api.png";
 import archScripts from "/Projects/arch-linux-scripts.png";
 import libPortal from "/Projects/las.png";
-import gpuanalysis from "/Projects/gpu-numba-proj.png"
+import gpuanalysis from "/Projects/gpu-numba-proj.png";
+import finalGradesEstimator from "/Projects/GradesEstimator.jpeg";
+import heartFailureModel from '/Projects/HeartFailureModel.jpeg'
 
 import VarientStore from "../Store/VarientStore";
 
@@ -45,6 +47,18 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
+							src={finalGradesEstimator}
+							alt='Regression Model'
+							projectTitle='Regression Model for Estimating Exam Score'
+							mobile={false}
+							href='https://github.com/yashkathe/Final-Grades-Estimator-Regression'
+							description=' Created a multi-layer neural network with PyTorch, utilizing the UCI dataset to predict final 
+                            exam scores and achieved accuracy of 96% through hyperparameter optimization and rich feature extraction'
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
 							src={chatBot}
 							alt='Chat Bot'
 							projectTitle='Chat Bot powered by GPT 3.5 Turbo'
@@ -52,19 +66,6 @@ const Projects = () => {
 							href='https://github.com/yashkathe/AI-Chat-Bot-MERN'
 							description='Developed a secure and scalable chatbot application using the MERN stack with TypeScript, incorporating user authentication, 
                             JSON Web Tokens, and HTTP cookies for seamless and authenticated communication within the platform.'
-						/>
-					</div>
-                    <div>
-						<Project
-							delay={Math.random() * 0.2}
-							src={gpuanalysis}
-							alt='CPU vs GPU analysis'
-							projectTitle='Runtime Analysis for Image Denoising on CPU and GPU'
-							mobile={false}
-							href='https://github.com/yashkathe/Image-Noise-reduction-with-CUDA'
-							description='Performed comprehensive analysis of image denoising technique - median blur, 
-                            comparing GPU-accelerated (Numba) and CPU-based (OpenCV) processing speeds. Using diverse images, 
-                            the project applies median filtering to assess efficiency providing insights into the practical impacts of hardware acceleration'
 						/>
 					</div>
 					<div>
@@ -78,6 +79,19 @@ const Projects = () => {
 							description='F1-API is a TypeScript-based web scraping application designed to
                             extract comprehensive information about Formula 1 races, drivers,
                             cars, standings, race schedules and many more'
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={gpuanalysis}
+							alt='CPU vs GPU analysis'
+							projectTitle='Runtime Analysis for Image Denoising on CPU and GPU'
+							mobile={false}
+							href='https://github.com/yashkathe/Image-Noise-reduction-with-CUDA'
+							description='Performed comprehensive analysis of image denoising technique - median blur, 
+                            comparing GPU-accelerated (Numba) and CPU-based (OpenCV) processing speeds. Using diverse images, 
+                            the project applies median filtering to assess efficiency providing insights into the practical impacts of hardware acceleration'
 						/>
 					</div>
 					<div>
@@ -136,6 +150,19 @@ const Projects = () => {
 							href='https://github.com/yashkathe/Monitoring-system-with-arduino'
 							description='Engineered a monitoring system utilizing an array of sensors including DHT22 for temperature and humidity, IR for proximity sensing, MQ6 for gas detection,
                              all seamlessly integrated with an LCD display, all orchestrated through an Arduino Uno. '
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={heartFailureModel}
+							alt='Binary Classification Model for Predicting Heart Failure'
+							projectTitle='Binary Classification Model for Predicting Heart Failure'
+							mobile={false}
+							href='https://github.com/yashkathe/Predict-Heart-Failure-Binary-Classification'
+							description='Predicted heart failure with 90% accuracy using PyTorch neural networks, leveraging Kaggle and UC Irvine clinical data. 
+                            Conducted data preprocessing, including handling missing values, feature scaling, and exploratory analysis, and optimized binary classification 
+                            models for performance'
 						/>
 					</div>
 					<div>
