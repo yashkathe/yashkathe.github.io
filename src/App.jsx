@@ -6,7 +6,6 @@ import Header from "./Shared/Header";
 import Socials from "./Shared/Socials";
 import Home from "./Home/Home";
 import Projects from "./Projects/Projects";
-import Blog from "./Blog/Blog";
 import Experiences from "./Experience/Experiences";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
@@ -22,7 +21,6 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/projects' element={<Projects />} />
-                    <Route path='/blog' element={<Blog/>}/>
 					<Route path='/experience' element={<Experiences />} />
 					<Route path='/about' element={<About />} />
 					<Route path='/contact' element={<Contact />} />

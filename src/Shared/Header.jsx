@@ -6,6 +6,7 @@ import MobileLinks from "./Hamburger-Icon/MobileLinks";
 
 import styles from "./Header.module.css";
 import { motion, AnimatePresence } from "framer-motion";
+import ATag from "./Components/ATag";
 
 const Header = () => {
 	const [mobileNavClick, setMobileNavClick] = useState(false);
@@ -37,7 +38,7 @@ const Header = () => {
 			</motion.div>
 			<ul>
 				<FMLink to='/'>Home</FMLink>
-				<FMLink to='/blog'> Blog </FMLink>
+                <ATag to='https://yashkathe.github.io/my-blog/'>Blog</ATag>
 				<FMLink to='/projects'> Projects </FMLink>
 				<FMLink to='/experience'> Experience </FMLink>
 				<FMLink to='/about'> About </FMLink>
