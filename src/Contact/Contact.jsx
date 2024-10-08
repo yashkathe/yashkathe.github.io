@@ -19,7 +19,7 @@ const Contact = () => {
 					variants={variantsCtx.pageTitleVariant}
 					initial='initial'
 					animate='animate'>
-					Let's Talk
+					Let's Connect
 				</motion.h1>
 				<div></div>
 				<div className={`${styles.children}`}>

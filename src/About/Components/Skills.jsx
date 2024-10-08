@@ -36,12 +36,16 @@ const Skills = () => {
 				<div className={styles.skills}>
 					<Skill
 						title='Web Development'
-						skillSet='• HTML • CSS • Javascript • Typescript • NodeJS • ReactJS'
+						skillSet='• HTML • CSS • Javascript • Typescript • NodeJS • ExpressJS • ReactJS • Tailwind CSS • NextJS' 
 					/>
-					<Skill title='Programming' skillSet='• C • C++ • Python • Bash' />
+					<Skill title='Programming' skillSet='• C++ • C# • Python • Bash Shell Scripting' />
 					<Skill
 						title='Devops and Databases'
-						skillSet='• Git • Github Actions • Linux • Docker • Ansible • AWS • SQL • MongoDB'
+						skillSet='• Git • Github Actions • SQL • MongoDB • Docker • Kubernetes • Ansible • AWS • Linux '
+					/>
+                    <Skill
+						title='AI/ML'
+						skillSet='• PyTorch • LangChain • Chroma DB (Vector Database)'
 					/>
 				</div>
 			</motion.div>

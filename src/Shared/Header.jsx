@@ -38,7 +38,6 @@ const Header = () => {
 			</motion.div>
 			<ul>
 				<FMLink to='/'>Home</FMLink>
-                <ATag to='https://yashkathe.github.io/my-blog/'>Blog</ATag>
 				<FMLink to='/projects'> Projects </FMLink>
 				<FMLink to='/experience'> Experience </FMLink>
 				<FMLink to='/about'> About </FMLink>

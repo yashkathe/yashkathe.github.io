@@ -32,16 +32,7 @@ const Bio = () => {
 				initial='initial'
 				animate='animate'>
 				<p>
-					My journey began with a degree in Electronics and Telecommunication
-					from the University of Mumbai. Experiencing virtual classes during the
-					COVID era highlighted that theoretical knowledge alone wasn't
-					sufficient, especially in hands-on fields like Electronics.
-					Recognizing this gap, I made a pivot towards software development,
-					delving into the world of full-stack technology. This unique blend of
-					Electronics and software knowledge became my strength. Now, pursuing a
-					Master's in Computer Engineering at the University of California,
-					Riverside, I'm excited to enhance my computer science expertise and
-					contribute to the forefront of innovation.
+                I hold a degree in Electronics and Telecommunication from the University of Mumbai, where I built a strong foundation in hardware, software, and mathematics. Currently I'm a Master's student at the University of California, Riverside majoring in Computer Engineering and working as a Directed Researcher.
 				</p>
 			</motion.div>
 		</div>

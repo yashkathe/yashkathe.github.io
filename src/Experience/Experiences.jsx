@@ -25,19 +25,8 @@ const Experiences = () => {
 				</motion.h1>
 				<div></div>
 				<div className={`${shared["children-shared"]} ${styles.children}`}>
-					<Experience
+                <Experience
 						flip={true}
-						imageSrc={iotiot}
-						jobTitle='Dev Ops Engineer Intern'
-						company='IotIot.in'
-						company_href='https://iotiot.in/'
-						jobDescription1="• Automated Linux environment testing, package installation, and boot script creation for 'Brainy Pi' using Bash scripts, improving testing efficiency and deployment time"
-						jobDescription2='• Developed an interactive GUI for the Linux Terminal using Whiptail, enhancing user interaction and supporting screen resolution adjustments and hardware protocols like SPI, I2C, and UART'
-						jobDescription3='• Created an Ansible script for backup and restoration of servers running Docker Swarm and Kubernetes, ensuring data integrity and minimizing downtime during maintenance'
-						timeline='August 2022 - December 2022'
-					/>
-					<Experience
-						flip={false}
 						imageSrc={ucr}
 						jobTitle='Directed Researcher'
 						advisor='Advisor: Professor Zhaowei Tan'
@@ -48,6 +37,18 @@ const Experiences = () => {
 						jobDescription2='• Designed and created a PCB using EasyEDA to transmit GNSS coordinates to a custom Raspberry Pi-based LoRaWAN gateway'
 						timeline='March 2024 - Present'
 					/>
+                    <Experience
+						flip={false}
+						imageSrc={iotiot}
+						jobTitle='Dev Ops Engineer Intern'
+						company='IotIot.in'
+						company_href='https://iotiot.in/'
+						jobDescription1="• Automated Linux environment testing, package installation, and boot script creation for 'Brainy Pi' using Bash scripts, improving testing efficiency and deployment time"
+						jobDescription2='• Developed an interactive GUI for the Linux Terminal using Whiptail, enhancing user interaction and supporting screen resolution adjustments and hardware protocols like SPI, I2C, and UART'
+						jobDescription3='• Created an Ansible script for backup and restoration of servers running Docker Swarm and Kubernetes, ensuring data integrity and minimizing downtime during maintenance'
+						timeline='August 2022 - December 2022'
+					/>
+
 				</div>
 			</div>
 		</div>

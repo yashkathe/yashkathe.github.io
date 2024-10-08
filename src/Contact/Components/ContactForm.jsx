@@ -51,6 +51,7 @@ const ContactForm = () => {
 			setIsLoading(false);
 			setIsVisible(true);
 			setMessage("Something went wrong");
+            console.log(error)
 		}
 	};
 
