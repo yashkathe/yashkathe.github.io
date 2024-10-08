@@ -8,6 +8,8 @@ import shared from "../Shared/CSS/shared.module.css";
 
 import iotiot from "/Experience/iotiot.png";
 import ucr from "/Experience/ucriverside.png";
+import sfit from "/Experience/sfit.png";
+import BeBlackBook from "./Files/BE-BLACK-BOOK.pdf";
 
 import VarientStore from "../Store/VarientStore";
 
@@ -21,11 +23,11 @@ const Experiences = () => {
 					variants={variantsCtx.pageTitleVariant}
 					initial='initial'
 					animate='animate'>
-					My Work Experience
+					Research & Work Experience
 				</motion.h1>
 				<div></div>
 				<div className={`${shared["children-shared"]} ${styles.children}`}>
-                <Experience
+					<Experience
 						flip={true}
 						imageSrc={ucr}
 						jobTitle='Directed Researcher'
@@ -37,8 +39,24 @@ const Experiences = () => {
 						jobDescription2='• Designed and created a PCB using EasyEDA to transmit GNSS coordinates to a custom Raspberry Pi-based LoRaWAN gateway'
 						timeline='March 2024 - Present'
 					/>
-                    <Experience
+					<Experience
 						flip={false}
+						imageSrc={sfit}
+						jobTitle='Undergraduate Research'
+						advisor='Advisor: Dr. Gautam Shah'
+						advisor_href='https://www.sfit.ac.in/faculty-profile.php?id=26'
+						company='St. Francis Institute of Technology'
+						company_href='https://www.sfit.ac.in/'
+						jobDescription1='• Developed an automated self-issue and return system for libraries by creating a QR code-based authentication algorithm and Raspberry Pi,
+reducing manual checkout time and improving system accuracy'
+						jobDescription2='• Implemented automatic ISBN scanning when a user places a book on the system hardware using PiCam and an IR sensor to automatically
+retrieve book information from the Google Books API to enable real-time inventory updates in MongoDB and eliminate manual data entry'
+						jobDescription3='• Implemented an anti-theft system using RFID stickers to keep track of books and prevent unauthorized removals'
+						timeline='June 2022 - June 2023'
+						read_more={BeBlackBook}
+					/>
+					<Experience
+						flip={true}
 						imageSrc={iotiot}
 						jobTitle='Dev Ops Engineer Intern'
 						company='IotIot.in'
@@ -48,7 +66,6 @@ const Experiences = () => {
 						jobDescription3='• Created an Ansible script for backup and restoration of servers running Docker Swarm and Kubernetes, ensuring data integrity and minimizing downtime during maintenance'
 						timeline='August 2022 - December 2022'
 					/>
-
 				</div>
 			</div>
 		</div>

@@ -25,13 +25,25 @@ const Experience = (props) => {
 				<a href={props.company_href} target='_blank'>
 					<h3>{props.company}</h3>
 				</a>
-                <a href={props.advisor_href} target='_blank' className={styles.advisor_a}>
+				<a
+					href={props.advisor_href}
+					target='_blank'
+					className={styles.a_p_no_margin}>
 					<p>{props.advisor}</p>
 				</a>
 				<p className={styles.mobileTimeline}>({props.timeline})</p>
 				<p>{props.jobDescription1}</p>
 				<p>{props.jobDescription2}</p>
 				<p>{props.jobDescription3}</p>
+				{props.read_more && (
+					<a
+						href={props.read_more}
+						target='_blank'
+						rel='noopener noreferrer'
+						className={styles.a_p_no_margin}>
+						<p>Read More</p>{" "}
+					</a>
+				)}
 			</motion.div>
 			<motion.div
 				className={styles.companyLogo}
