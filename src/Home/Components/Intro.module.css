@@ -11,12 +11,12 @@
 
 .parent>p {
     font-size: 1.8rem;
-    height: 5rem;
+    height: auto;
 }
 
 @media(max-width:56rem) {
 
-    .parent{
+    .parent {
         justify-content: flex-start;
         margin-top: 10vh;
     }

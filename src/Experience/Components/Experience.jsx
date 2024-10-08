@@ -25,6 +25,9 @@ const Experience = (props) => {
 				<a href={props.company_href} target='_blank'>
 					<h3>{props.company}</h3>
 				</a>
+                <a href={props.advisor_href} target='_blank' className={styles.advisor_a}>
+					<p>{props.advisor}</p>
+				</a>
 				<p className={styles.mobileTimeline}>({props.timeline})</p>
 				<p>{props.jobDescription1}</p>
 				<p>{props.jobDescription2}</p>
@@ -40,7 +43,11 @@ const Experience = (props) => {
 				</a>
 			</motion.div>
 			<motion.div
-				className={props.flip ? `${styles.timeline} ${styles.timeline_flip}` : styles.timeline}
+				className={
+					props.flip
+						? `${styles.timeline} ${styles.timeline_flip}`
+						: styles.timeline
+				}
 				variants={
 					window.innerWidth < 896
 						? variantsCtx.mobilePop

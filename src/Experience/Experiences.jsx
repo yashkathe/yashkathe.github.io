@@ -7,7 +7,7 @@ import styles from "./Experiences.module.css";
 import shared from "../Shared/CSS/shared.module.css";
 
 import iotiot from "/Experience/iotiot.png";
-import acmUcr from "/Experience/acm-ucr-logo.webp"
+import ucr from "/Experience/ucriverside.png";
 
 import VarientStore from "../Store/VarientStore";
 
@@ -28,23 +28,25 @@ const Experiences = () => {
 					<Experience
 						flip={true}
 						imageSrc={iotiot}
-						jobTitle='Software Engineer Intern'
+						jobTitle='Dev Ops Engineer Intern'
 						company='IotIot.in'
-                        company_href="https://iotiot.in/"
-						jobDescription1='• Worked on the “Brainy PI” project which seeks to solve the worldwide raspberry Pi scarcity. Wrote bash scripts for installing packages and automated the process of testing the os.'
-						jobDescription2='• Used Whiptail and tools such as sed, awk, cut and tr to add functionality to a command line interface tool to change screen resolution, adding camera support, enabling and disabling UART, One Wire Interface, and VNC.'
-						jobDescription3='• Worked with Clustering Team to create docker swarms to deploy applications and wrote a script using ansible to backup and restore the whole docker swarm in case the whole cluster fails.'
+						company_href='https://iotiot.in/'
+						jobDescription1="• Automated Linux environment testing, package installation, and boot script creation for 'Brainy Pi' using Bash scripts, improving testing efficiency and deployment time"
+						jobDescription2='• Developed an interactive GUI for the Linux Terminal using Whiptail, enhancing user interaction and supporting screen resolution adjustments and hardware protocols like SPI, I2C, and UART'
+						jobDescription3='• Created an Ansible script for backup and restoration of servers running Docker Swarm and Kubernetes, ensuring data integrity and minimizing downtime during maintenance'
 						timeline='August 2022 - December 2022'
 					/>
-                    <Experience
+					<Experience
 						flip={false}
-						imageSrc={acmUcr}
-						jobTitle='Web Developer'
-						company='Association for Computer Machinery - UC Riverside'
-						company_href="https://acm.cs.ucr.edu/"
-                        jobDescription1="• Working closely with the team to develop 'R-Jobs' website, UC Riverside's official platform connecting students with on-campus job opportunities posted by various departments within the university"
-						jobDescription2='• Leading the team in translating Figma designs into a responsive web application using Tailwind CSS and Next.js, fostering collaboration through GitHub to ensure a smooth development process'
-						timeline='January 2024 - Present'
+						imageSrc={ucr}
+						jobTitle='Directed Researcher'
+						advisor='Advisor: Professor Zhaowei Tan'
+						advisor_href='https://cs.ucr.edu/~ztan/#group'
+						company='GeNeLa - Networking Lab @ UC Riverside'
+						company_href='https://cs.ucr.edu/~ztan/group.html'
+						jobDescription1='• Developing a micro embedded tracking device with LoRaWAN support and GNSS capabilities, optimized for low power consumption and energy efficiency'
+						jobDescription2='• Designed and created a PCB using EasyEDA to transmit GNSS coordinates to a custom Raspberry Pi-based LoRaWAN gateway'
+						timeline='March 2024 - Present'
 					/>
 				</div>
 			</div>
