@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 import styles from "./CustomNotification.module.css";
 
@@ -23,15 +23,29 @@ const CustomNotification = (props) => {
 		},
 	};
 
+	const [isVisible, setIsVisible] = useState(false);
+
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setIsVisible(false);
+		}, 3000);
+
+		return () => clearTimeout(timeout);
+	}, [isVisible]);
+
 	return (
-		<motion.div
-			className={styles.parent}
-			variants={parentVariant}
-			initial='initial'
-			animate='animate'
-			exit='initial'>
-			<p>{props.children}</p>
-		</motion.div>
+		<AnimatePresence>
+			{isVisible && (
+				<motion.div
+					className={styles.parent}
+					variants={parentVariant}
+					initial='initial'
+					animate='animate'
+					exit='initial'>
+					<p>{props.children}</p>
+				</motion.div>
+			)}
+		</AnimatePresence>
 	);
 };
 

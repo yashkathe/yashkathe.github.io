@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
 
-import CustomNotification from "../../Shared/Notification/CustomNotification";
 import Spinner from "../../Shared/Spinner/Spinner";
 
 import styles from "./ContactForm.module.css";
@@ -16,19 +16,22 @@ const publicKey = import.meta.env.VITE_API_EMAILJS_KEY;
 const ContactForm = () => {
 	const variantsCtx = useContext(VarientStore);
 
-	const [isVisible, setIsVisible] = useState(false);
 	const [message, setMessage] = useState();
 	const [isLoading, setIsLoading] = useState(false);
 
-	useEffect(() => {
-		const timeout = setTimeout(() => {
-			setIsVisible(false);
-		}, 3000);
-
-		return () => clearTimeout(timeout);
-	}, [isVisible]);
-
 	const formElement = useRef();
+
+	const toastConfig = {
+		position: "bottom-right",
+		autoClose: 5000,
+		hideProgressBar: false,
+		closeOnClick: true,
+		pauseOnHover: true,
+		draggable: true,
+		progress: undefined,
+		theme: "light",
+		style: { fontSize: "1rem", color: "#121212", background: "#e8e6e3" },
+	};
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
@@ -45,13 +48,13 @@ const ContactForm = () => {
 				? setMessage("Email Sent Successfully")
 				: setMessage(result.text);
 			setIsLoading(false);
-			setIsVisible(true);
+			toast.success(message, toastConfig);
 			formElement.current.reset();
 		} catch (error) {
 			setIsLoading(false);
-			setIsVisible(true);
-			setMessage("Something went wrong");
-            console.log(error)
+			setMessage(error);
+			toast.error(message, toastConfig);
+			console.log(error);
 		}
 	};
 
@@ -83,9 +86,7 @@ const ContactForm = () => {
 					</div>
 				</form>
 			</motion.div>
-			<AnimatePresence>
-				{isVisible && <CustomNotification>{message}</CustomNotification>}
-			</AnimatePresence>
+			<ToastContainer />
 			{isLoading && <Spinner />}
 		</>
 	);
