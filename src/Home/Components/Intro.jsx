@@ -22,7 +22,7 @@ const Intro = () => {
 			<h1>Hello, I'm Yash Kathe</h1>
 			<p>
 				I am Master's Student @ UC Riverside, majoring in Computer Engineering. <br/>
-                My research interests include the Internet of Things, Cyber Physcial Systems, Machine Learning and Artifical Intelligence.
+                My research interests include the Internet of Things, Cyber Physical Systems, Machine Learning and Artificial Intelligence.
 			</p>
 		</motion.div>
 	);
