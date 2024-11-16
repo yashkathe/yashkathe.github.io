@@ -37,38 +37,42 @@ const ContactForm = () => {
 		style: { fontSize: "1rem", color: "#121212", background: "#e8e6e3" },
 	};
 
-	const handleSubmit = async (event) => {
-		event.preventDefault();
-		setIsLoading(true);
-
-		if (
-			textRef.current.value.trim().length === 0 ||
-			emailRef.current.value.trim().length === 0 ||
-			messageRef.current.value.trim().length === 0
-		) {
-			toast.error('Values Cannot Be Empty', toastConfig);
-		}
-
-		try {
-			const result = await emailjs.sendForm(
-				serviceID,
-				templateID,
-				formElement.current,
-				publicKey
-			);
-			console.log(result);
-			result.status === 200
-				? setMessage("Email Sent Successfully")
-				: setMessage(result.text);
-			setIsLoading(false);
-			toast.success(message, toastConfig);
-			formElement.current.reset();
-		} catch (error) {
-			setIsLoading(false);
-			setMessage(error);
-			toast.error(message, toastConfig);
-		}
-	};
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setIsLoading(true);
+    
+        if (
+            textRef.current.value.trim().length === 0 ||
+            emailRef.current.value.trim().length === 0 ||
+            messageRef.current.value.trim().length === 0
+        ) {
+            toast.error("Input Fields Cannot Be Empty", toastConfig);
+            setIsLoading(false); 
+            return;
+        }
+    
+        try {
+            const result = await emailjs.sendForm(
+                serviceID,
+                templateID,
+                formElement.current,
+                publicKey
+            );
+    
+            if (result.status === 200) {
+                toast.success("Email Sent Successfully", toastConfig);
+            } else {
+                toast.error(`Error: ${result.text}`, toastConfig);
+            }
+    
+            formElement.current.reset();
+        } catch (error) {
+            toast.error(`Error: ${error.message}`, toastConfig);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+    
 
 	return (
 		<>
@@ -86,7 +90,7 @@ const ContactForm = () => {
 							type='text'
 							name='name'
 							placeholder='Name'
-							minLength='4'
+							minLength='2'
 							ref={textRef}
 						/>
 						<input
@@ -102,7 +106,7 @@ const ContactForm = () => {
 							name='message'
 							placeholder='Message'
 							rows='12'
-							minLength='10'
+							minLength='2'
 							column='100%'></textarea>
 					</div>
 					<div>
