@@ -19,6 +19,10 @@ const ContactForm = () => {
 	const [message, setMessage] = useState();
 	const [isLoading, setIsLoading] = useState(false);
 
+	const textRef = useRef();
+	const emailRef = useRef();
+	const messageRef = useRef();
+
 	const formElement = useRef();
 
 	const toastConfig = {
@@ -36,6 +40,15 @@ const ContactForm = () => {
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		setIsLoading(true);
+
+		if (
+			textRef.current.value.trim().length === 0 ||
+			emailRef.current.value.trim().length === 0 ||
+			messageRef.current.value.trim().length === 0
+		) {
+			toast.error('Values Cannot Be Empty', toastConfig);
+		}
+
 		try {
 			const result = await emailjs.sendForm(
 				serviceID,
@@ -54,7 +67,6 @@ const ContactForm = () => {
 			setIsLoading(false);
 			setMessage(error);
 			toast.error(message, toastConfig);
-			console.log(error);
 		}
 	};
 
@@ -70,11 +82,23 @@ const ContactForm = () => {
 				animate='animate'>
 				<form className={styles.form} onSubmit={handleSubmit} ref={formElement}>
 					<div>
-						<input type='text' name='name' placeholder='Name' minLength='4' />
-						<input type='email' name='email' placeholder='Email' />
+						<input
+							type='text'
+							name='name'
+							placeholder='Name'
+							minLength='4'
+							ref={textRef}
+						/>
+						<input
+							type='email'
+							name='email'
+							placeholder='Email'
+							ref={emailRef}
+						/>
 					</div>
 					<div>
 						<textarea
+							ref={messageRef}
 							name='message'
 							placeholder='Message'
 							rows='12'
