@@ -72,7 +72,7 @@ const Projects = () => {
 							delay={Math.random() * 0.2}
 							src={dualencoder}
 							alt='CLIP enhanchment'
-							projectTitle="Local Feature Enhancement for Open AI's CLIP"
+							projectTitle="Local Feature Enhancement for Open AI's CLIP Model"
 							mobile={false}
 							href='https://yashkathe.github.io/CLIP-local-feature-enhancement/'
 							description='Implemented a Dual encoder architecture for CLIP model that combines CLIP’s global features and ViT’s local features, fused via concatenation or attention layer, to enhance VQA performance.'

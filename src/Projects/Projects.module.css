@@ -13,8 +13,13 @@
     justify-content: center;
     width: 35vw;
     height: 50vh;
-    margin-right: 5vw;
+    padding: 0 1.5vw;
     margin-bottom: 10vh;
+}
+
+.credits{
+    margin-top: 5rem;
+    color: rgb(141, 141, 141);
 }
 
 @media(max-width:56rem) {
@@ -33,9 +38,8 @@
         height: 35vh;
         width: 100%;
     }
-}
 
-.credits{
-    margin-top: 5rem;
-    color: rgb(141, 141, 141);
+    .credits{
+        margin-top: 2rem;
+    }
 }
