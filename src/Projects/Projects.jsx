@@ -13,10 +13,12 @@ import chatBot from "/Projects/chat-bot.gif";
 import f1 from "/Projects/f1-api.png";
 import comics from "/Projects/comics-api.png";
 import archScripts from "/Projects/arch-linux-scripts.png";
-import libPortal from "/Projects/las.png";
 import gpuanalysis from "/Projects/gpu-numba-proj.png";
 import finalGradesEstimator from "/Projects/GradesEstimator.jpeg";
 import heartFailureModel from "/Projects/HeartFailureModel.jpeg";
+import dualencoder from "/Projects/dual-encoder.png";
+import cirrhosis from "/Projects/liver-cirrhosis.png";
+import ai_extension_browser from "/Projects/extension_leetcode.webp";
 
 import VarientStore from "../Store/VarientStore";
 
@@ -66,6 +68,52 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
+							src={dualencoder}
+							alt='CLIP enhanchment'
+							projectTitle="Local Feature Enhancement for Open AI's CLIP"
+							mobile={false}
+							href='https://yashkathe.github.io/CLIP-local-feature-enhancement/'
+							description='Implemented a Dual encoder architecture for CLIP model that combines CLIP’s global features and ViT’s local features, fused via concatenation or attention layer, to enhance VQA performance.'
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={cirrhosis}
+							alt='Neural Network from Scratch for Cirrhosis Prediction (With Notes)'
+							projectTitle='Neural Network from Scratch for Cirrhosis Prediction (With Notes)'
+							mobile={false}
+							href='https://yashkathe.github.io/Cirrhosis-Prediction/'
+							description='Compared Performance of Neural network written from scratch using Numpy and other with pytorch to predict cirrhosis stages'
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={ai_extension_browser}
+							alt='AI Browser Extension for Leetcode '
+							projectTitle='AI Browser Extension for Leetcode '
+							mobile={false}
+							href='https://yashkathe.github.io/Leetcode-Mentor-AI/'
+							description='Firefox extension that assists users in solving LeetCode problems by providing intelligent, real-time hints and insights powered by 
+                            the user’s choice of Large Language Model (LLM), seamlessly integrating with LeetCode to offer personalized guidance'
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
+							src='https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture4.png'
+							alt='Monitoring System'
+							projectTitle='Home Monitoring System'
+							mobile={false}
+							href='https://github.com/yashkathe/Security-system-with-raspberryPi'
+							description='Engineered a monitoring system utilizing an array of sensors including DHT22 for temperature and humidity, IR for proximity sensing, MQ6 for gas detection,
+                             all seamlessly integrated with an LCD display, all orchestrated through an Arduino Uno. '
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
 							src={gpuanalysis}
 							alt='CPU vs GPU analysis'
 							projectTitle='Runtime Analysis for Image Denoising on CPU and GPU'
@@ -79,18 +127,6 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
-							src='https://raw.githubusercontent.com/yashkathe/Monitoring-system-with-arduino/master/assets/dht22.jpeg'
-							alt='monitoring system with arduino'
-							projectTitle='Home monitoring system'
-							mobile={false}
-							href='https://github.com/yashkathe/Monitoring-system-with-arduino'
-							description='Engineered a monitoring system utilizing an array of sensors including DHT22 for temperature and humidity, IR for proximity sensing, MQ6 for gas detection,
-                             all seamlessly integrated with an LCD display, all orchestrated through an Arduino Uno. '
-						/>
-					</div>
-					<div>
-						<Project
-							delay={Math.random() * 0.2}
 							src={heartFailureModel}
 							alt='Binary Classification Model for Predicting Heart Failure'
 							projectTitle='Binary Classification Model for Predicting Heart Failure'
@@ -99,18 +135,6 @@ const Projects = () => {
 							description='Predicted heart failure with 90% accuracy using PyTorch neural networks, leveraging Kaggle and UC Irvine clinical data. 
                             Conducted data preprocessing, including handling missing values, feature scaling, and exploratory analysis, and optimized binary classification 
                             models for performance'
-						/>
-					</div>
-					<div>
-						<Project
-							delay={Math.random() * 0.2}
-							src={finalGradesEstimator}
-							alt='Regression Model'
-							projectTitle='Regression Model for Estimating Exam Score'
-							mobile={false}
-							href='https://github.com/yashkathe/Final-Grades-Estimator-Regression'
-							description=' Created a multi-layer neural network with PyTorch, utilizing the UCI dataset to predict final 
-                            exam scores and achieved accuracy of 96% through hyperparameter optimization and rich feature extraction'
 						/>
 					</div>
 					<div>
@@ -136,6 +160,18 @@ const Projects = () => {
 							description='F1-API is a TypeScript-based web scraping application designed to
                             extract comprehensive information about Formula 1 races, drivers,
                             cars, standings, race schedules and many more'
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={finalGradesEstimator}
+							alt='Regression Model'
+							projectTitle='Regression Model for Estimating Exam Score'
+							mobile={false}
+							href='https://github.com/yashkathe/Final-Grades-Estimator-Regression'
+							description=' Created a multi-layer neural network with PyTorch, utilizing the UCI dataset to predict final 
+                            exam scores and achieved accuracy of 96% through hyperparameter optimization and rich feature extraction'
 						/>
 					</div>
 					<div>
@@ -199,6 +235,9 @@ const Projects = () => {
 				</div>
 				<ToastContainer />
 			</div>
+			<p className={styles.credits}>
+				<i>Some images for projects are sourced from the internet, credited to respective owners.</i>
+			</p>
 		</div>
 	);
 };
