@@ -37,42 +37,41 @@ const ContactForm = () => {
 		style: { fontSize: "1rem", color: "#121212", background: "#e8e6e3" },
 	};
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        setIsLoading(true);
-    
-        if (
-            textRef.current.value.trim().length === 0 ||
-            emailRef.current.value.trim().length === 0 ||
-            messageRef.current.value.trim().length === 0
-        ) {
-            toast.error("Input Fields Cannot Be Empty", toastConfig);
-            setIsLoading(false); 
-            return;
-        }
-    
-        try {
-            const result = await emailjs.sendForm(
-                serviceID,
-                templateID,
-                formElement.current,
-                publicKey
-            );
-    
-            if (result.status === 200) {
-                toast.success("Email Sent Successfully", toastConfig);
-            } else {
-                toast.error(`Error: ${result.text}`, toastConfig);
-            }
-    
-            formElement.current.reset();
-        } catch (error) {
-            toast.error(`Error: ${error.message}`, toastConfig);
-        } finally {
-            setIsLoading(false);
-        }
-    };
-    
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+		setIsLoading(true);
+
+		if (
+			textRef.current.value.trim().length === 0 ||
+			emailRef.current.value.trim().length === 0 ||
+			messageRef.current.value.trim().length === 0
+		) {
+			toast.error("Input Fields Cannot Be Empty", toastConfig);
+			setIsLoading(false);
+			return;
+		}
+
+		try {
+			const result = await emailjs.sendForm(
+				serviceID,
+				templateID,
+				formElement.current,
+				publicKey
+			);
+
+			if (result.status === 200) {
+				toast.success("Email Sent Successfully", toastConfig);
+			} else {
+				toast.error(`Error: ${result.text}`, toastConfig);
+			}
+
+			formElement.current.reset();
+		} catch (error) {
+			toast.error(`Error: ${error.message}`, toastConfig);
+		} finally {
+			setIsLoading(false);
+		}
+	};
 
 	return (
 		<>

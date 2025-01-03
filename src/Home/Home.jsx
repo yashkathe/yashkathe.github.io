@@ -8,7 +8,7 @@ import Intro from "./Components/Intro";
 
 import styles from "./Home.module.css";
 
-import pfp from "/profile-picture.jpg";
+import pfp from "/pfp-irvine.jpg";
 
 import VarientStore from "../Store/VarientStore";
 
