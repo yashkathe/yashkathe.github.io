@@ -8,6 +8,7 @@ import github from "/Icons/github.svg";
 import leetcode from "/Icons/leetcode-3.png";
 import npm from "/Icons/npm-3.png"
 import docker from "/Icons/docker-3.png"
+import medium from "/Icons/medium.svg"
 
 const Socials = (props) => {
 	return (
@@ -31,6 +32,11 @@ const Socials = (props) => {
                 alt='npm'
                 src={npm}
                 href='https://www.npmjs.com/~yashkathe'
+            />
+            <FMSocials
+                alt='medium'
+                src={medium}
+                href='https://medium.com/@ykath001'
             />
             <FMSocials
                 alt='docker'

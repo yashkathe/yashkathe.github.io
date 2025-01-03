@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import FMLink from "./Components/FMLink";
 import HamBurgerIcon from "./Hamburger-Icon/HamBurgerIcon";
-import MobileLinks from "./Hamburger-Icon/MobileLinks";
+import MobileLinks from "./MobileLinks";
 
 import styles from "./Header.module.css";
 import { motion, AnimatePresence } from "framer-motion";
