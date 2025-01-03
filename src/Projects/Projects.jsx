@@ -7,6 +7,7 @@ import shared from "../Shared/CSS/shared.module.css";
 import "react-toastify/dist/ReactToastify.css";
 
 import Project from "./Components/Project";
+import GithubStats from "./Components/GithubStats";
 
 import commuteConnnect from "/Projects/commute-connect.gif";
 import chatBot from "/Projects/chat-bot.gif";
@@ -52,6 +53,7 @@ const Projects = () => {
 					My Projects
 				</motion.h1>
 				<div></div>
+                <GithubStats/>
 				<div className={styles.children}>
 					<div>
 						<Project

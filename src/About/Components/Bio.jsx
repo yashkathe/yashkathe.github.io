@@ -32,7 +32,9 @@ const Bio = () => {
 				initial='initial'
 				animate='animate'>
 				<p>
-                I hold a degree in Electronics and Telecommunication from the University of Mumbai, where I built a strong foundation in hardware, software, and mathematics. Currently I'm a Master's student at the University of California, Riverside majoring in Computer Engineering and working as a Directed Researcher.
+                I completed my Bachelors of Engineering in Electronics and Telecommunication from Mumbai University, where I built a strong foundation in hardware, 
+                software, and mathematics. Currently I'm a Master's student at the University of California, Riverside majoring in Computer Engineering and 
+                working as a Directed Researcher under Professor Zhaowei Tan.
 				</p>
 			</motion.div>
 		</div>

@@ -1,0 +1,40 @@
+.parent {
+    margin: 5rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.statItem {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.icon {
+    max-height: 100%;
+    max-width: auto;
+    padding: 0.5rem;
+}
+
+@media(max-width:28rem) {
+
+    .parent {
+        margin: 2.5rem 0;
+    }
+
+    .statItem {
+        font-size: 0.8rem;
+    }
+
+    .icon {
+        height: 2rem;
+        padding: 0.2rem;
+    }
+
+}
