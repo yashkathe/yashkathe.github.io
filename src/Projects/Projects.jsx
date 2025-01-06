@@ -21,7 +21,7 @@ import dualencoder from "/Projects/dual-encoder.png";
 import cirrhosis from "/Projects/liver-cirrhosis.png";
 import ai_extension_browser from "/Projects/extension_leetcode.webp";
 import masters_pcb from "/Projects/masters-project.png";
-import image_classification from "/Projects/cs205-project.webp"
+import image_classification from "/Projects/cs205-project.webp";
 
 import VarientStore from "../Store/VarientStore";
 
@@ -60,8 +60,11 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
-							// src={libPortal}
-							src='https://github.com/yashkathe/Library-Automation-System/raw/master/assets/project-photo.jpg'
+							src={[
+								"https://github.com/yashkathe/Library-Automation-System/raw/master/assets/project-photo.jpg",
+                                "https://github.com/yashkathe/Library-Automation-System/raw/master/assets/client_new.png",
+                                "https://github.com/yashkathe/Library-Automation-System/raw/master/assets/mix_new.png",
+							]}
 							alt='Library Automation System'
 							projectTitle='Library Automation System'
 							mobile={true}
@@ -72,7 +75,12 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
-							src={dualencoder}
+							src={[
+                                dualencoder,
+                                "https://yashkathe.github.io/CLIP-local-feature-enhancement/readme_content/base-clip-res.png",
+                                "https://yashkathe.github.io/CLIP-local-feature-enhancement/readme_content/dual-encoder-conc-res.png",
+                                "https://yashkathe.github.io/CLIP-local-feature-enhancement/readme_content/dual-encoder-attention-res.png"
+                            ]}
 							alt='CLIP enhanchment'
 							projectTitle="Local Feature Enhancement for Open AI's CLIP Model"
 							mobile={false}
@@ -83,7 +91,11 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
-							src={cirrhosis}
+							src={[
+								cirrhosis,
+								"https://yashkathe.github.io/Cirrhosis-Prediction/readme_content/from_scratch_plot.png",
+                                "https://yashkathe.github.io/Cirrhosis-Prediction/readme_content/accuracy_3.png"
+							]}
 							alt='Neural Network from Scratch for Cirrhosis Prediction (With Notes)'
 							projectTitle='Neural Network from Scratch for Cirrhosis Prediction (With Notes)'
 							mobile={false}
@@ -105,18 +117,6 @@ const Projects = () => {
                     <div>
 						<Project
 							delay={Math.random() * 0.2}
-							src={image_classification}
-							alt='Image Classification for Landscape Recognition'
-							projectTitle='Image Classification for Landscape Recognition'
-							mobile={false}
-							href='https://github.com/yashkathe/CS205-Image-Classification-for-Landscape-Recognition'
-							description='Implementation of custom convolutional neural network (CNN) architectures, specifically focusing on a Residual CNN and 
-                            an AlexNet model for image classification on a dataset containing buildings, forests, glaciers, mountains, seas, and streets.'
-						/>
-					</div>
-					<div>
-						<Project
-							delay={Math.random() * 0.2}
 							src={ai_extension_browser}
 							alt='AI Browser Extension for Leetcode '
 							projectTitle='AI Browser Extension for Leetcode '
@@ -129,7 +129,32 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
-							src='https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture4.png'
+							src={[
+								image_classification,
+								"https://github.com/yashkathe/CS205-Image-Classification-for-Landscape-Recognition/raw/main/screenshots/predict-1.png",
+								"https://github.com/yashkathe/CS205-Image-Classification-for-Landscape-Recognition/raw/main/screenshots/predict-2.png",
+								"https://github.com/yashkathe/CS205-Image-Classification-for-Landscape-Recognition/raw/main/screenshots/predict-3.png",
+								"https://github.com/yashkathe/CS205-Image-Classification-for-Landscape-Recognition/raw/main/screenshots/predict-4.png",
+								"https://github.com/yashkathe/CS205-Image-Classification-for-Landscape-Recognition/raw/main/screenshots/predict-5.png",
+								"https://github.com/yashkathe/CS205-Image-Classification-for-Landscape-Recognition/raw/main/screenshots/predict-6.png",
+							]}
+							alt='Image Classification for Landscape Recognition'
+							projectTitle='Image Classification for Landscape Recognition'
+							mobile={false}
+							href='https://github.com/yashkathe/CS205-Image-Classification-for-Landscape-Recognition'
+							description='Implementation of custom convolutional neural network (CNN) architectures, specifically focusing on a Residual CNN and 
+                            an AlexNet model for image classification on a dataset containing buildings, forests, glaciers, mountains, seas, and streets.'
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={[
+								"https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture4.png",
+                                "https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture2.png",
+                                "https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture7.png",
+                                "https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture3.png"
+                            ]}
 							alt='Monitoring System'
 							projectTitle='Home Monitoring System'
 							mobile={false}
@@ -189,7 +214,7 @@ const Projects = () => {
                             models for performance'
 						/>
 					</div>
-                    <div>
+					<div>
 						<Project
 							delay={Math.random() * 0.2}
 							src={commuteConnnect}
@@ -201,7 +226,7 @@ const Projects = () => {
                             allowing them to seamlessly find companions for shared journeys and make their travel experiences more cost-effective.'
 						/>
 					</div>
-                    <div>
+					<div>
 						<Project
 							delay={Math.random() * 0.2}
 							src='https://raw.githubusercontent.com/yashkathe/Weather-app-with-reactJs/master/src/Assets/Screenshots/Search.gif'

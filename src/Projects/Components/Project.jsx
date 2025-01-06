@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -9,7 +9,8 @@ import arrowRight from "/Icons/arrow-right.png";
 import VarientStore from "../../Store/VarientStore";
 
 const Project = (props) => {
-	const [hover, setHover] = useState();
+	const [hover, setHover] = useState(false);
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 	const variantsCtx = useContext(VarientStore);
 
@@ -22,12 +23,45 @@ const Project = (props) => {
 			scale: 1,
 			opacity: 1,
 			transition: {
-				type: " tween",
+				type: "tween",
 				duration: 0.6,
 				delay: 0.8,
 			},
 		},
 	};
+
+	const imageVariants = {
+		initial: {
+			opacity: 0,
+			scale: 0.9,
+		},
+		animate: {
+			opacity: 1,
+			scale: 1,
+		},
+		exit: {
+			opacity: 0,
+			scale: 0.8,
+		},
+	};
+
+	useEffect(() => {
+		if (props.src && Array.isArray(props.src) && props.src.length > 1) {
+			let timeout;
+
+			const changeImageAtRandomTime = () => {
+				setCurrentImageIndex((prevIndex) => (prevIndex + 1) % props.src.length);
+
+				const randomDelay =
+					Math.floor(Math.random() * (5000 - 1000 + 1)) + 1500;
+				timeout = setTimeout(changeImageAtRandomTime, randomDelay);
+			};
+
+			changeImageAtRandomTime();
+
+			return () => clearTimeout(timeout);
+		}
+	}, [props.src]);
 
 	return (
 		<motion.div
@@ -51,15 +85,21 @@ const Project = (props) => {
 				}
 			}}>
 			<div className={props.mobile ? styles.mobileImg : styles.pcImg}>
-				<motion.img
-					src={props.src}
-					alt={props.alt}
-					animate={
-						hover
-							? { scale: 1.1, transition: { type: "tween", duration: 0.5 } }
-							: {}
-					}
-				/>
+				<AnimatePresence mode='wait'>
+					<motion.img
+						key={currentImageIndex} // Use key to trigger exit and re-render
+						src={
+							Array.isArray(props.src)
+								? props.src[currentImageIndex]
+								: props.src
+						}
+						alt={props.alt}
+						variants={imageVariants}
+						initial='initial'
+						animate='animate'
+						exit='exit'
+					/>
+				</AnimatePresence>
 			</div>
 			<AnimatePresence>
 				{hover && (
