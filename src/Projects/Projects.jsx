@@ -20,6 +20,8 @@ import heartFailureModel from "/Projects/HeartFailureModel.jpeg";
 import dualencoder from "/Projects/dual-encoder.png";
 import cirrhosis from "/Projects/liver-cirrhosis.png";
 import ai_extension_browser from "/Projects/extension_leetcode.webp";
+import masters_pcb from "/Projects/masters-project.png";
+import image_classification from "/Projects/cs205-project.webp"
 
 import VarientStore from "../Store/VarientStore";
 
@@ -53,7 +55,7 @@ const Projects = () => {
 					My Projects
 				</motion.h1>
 				<div></div>
-                <GithubStats/>
+				<GithubStats />
 				<div className={styles.children}>
 					<div>
 						<Project
@@ -87,6 +89,29 @@ const Projects = () => {
 							mobile={false}
 							href='https://yashkathe.github.io/Cirrhosis-Prediction/'
 							description='Compared Performance of Neural network written from scratch using Numpy and other with pytorch to predict cirrhosis stages'
+						/>
+					</div>
+					<div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={masters_pcb}
+							alt='PCB photo'
+							projectTitle="Micro Embedded Tracking Device (Master's Research Project)"
+							mobile={false}
+							href='https://cs.ucr.edu/~ztan/group.html'
+							description="Master's Research Project on Micro-embedded tracking device for LoRaWAN network in collaboration with Boyd Deep Canyon Research Center"
+						/>
+					</div>
+                    <div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={image_classification}
+							alt='Image Classification for Landscape Recognition'
+							projectTitle='Image Classification for Landscape Recognition'
+							mobile={false}
+							href='https://github.com/yashkathe/CS205-Image-Classification-for-Landscape-Recognition'
+							description='Implementation of custom convolutional neural network (CNN) architectures, specifically focusing on a Residual CNN and 
+                            an AlexNet model for image classification on a dataset containing buildings, forests, glaciers, mountains, seas, and streets.'
 						/>
 					</div>
 					<div>
@@ -129,19 +154,6 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
-							src={heartFailureModel}
-							alt='Binary Classification Model for Predicting Heart Failure'
-							projectTitle='Binary Classification Model for Predicting Heart Failure'
-							mobile={false}
-							href='https://github.com/yashkathe/Predict-Heart-Failure-Binary-Classification'
-							description='Predicted heart failure with 90% accuracy using PyTorch neural networks, leveraging Kaggle and UC Irvine clinical data. 
-                            Conducted data preprocessing, including handling missing values, feature scaling, and exploratory analysis, and optimized binary classification 
-                            models for performance'
-						/>
-					</div>
-					<div>
-						<Project
-							delay={Math.random() * 0.2}
 							src={chatBot}
 							alt='Chat Bot'
 							projectTitle='Chat Bot powered by GPT 3.5 Turbo'
@@ -167,16 +179,29 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
-							src={finalGradesEstimator}
-							alt='Regression Model'
-							projectTitle='Regression Model for Estimating Exam Score'
+							src={heartFailureModel}
+							alt='Binary Classification Model for Predicting Heart Failure'
+							projectTitle='Binary Classification Model for Predicting Heart Failure'
 							mobile={false}
-							href='https://github.com/yashkathe/Final-Grades-Estimator-Regression'
-							description=' Created a multi-layer neural network with PyTorch, utilizing the UCI dataset to predict final 
-                            exam scores and achieved accuracy of 96% through hyperparameter optimization and rich feature extraction'
+							href='https://github.com/yashkathe/Predict-Heart-Failure-Binary-Classification'
+							description='Predicted heart failure with 90% accuracy using PyTorch neural networks, leveraging Kaggle and UC Irvine clinical data. 
+                            Conducted data preprocessing, including handling missing values, feature scaling, and exploratory analysis, and optimized binary classification 
+                            models for performance'
 						/>
 					</div>
-					<div>
+                    <div>
+						<Project
+							delay={Math.random() * 0.2}
+							src={commuteConnnect}
+							alt='Commute Connect'
+							projectTitle='Commute Connect'
+							mobile={false}
+							href='https://github.com/yashkathe/Commute-Connect'
+							description='Commute Connect is a MERN stack application that effortlessly links travelers with similar itineraries, 
+                            allowing them to seamlessly find companions for shared journeys and make their travel experiences more cost-effective.'
+						/>
+					</div>
+                    <div>
 						<Project
 							delay={Math.random() * 0.2}
 							src='https://raw.githubusercontent.com/yashkathe/Weather-app-with-reactJs/master/src/Assets/Screenshots/Search.gif'
@@ -191,13 +216,13 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
-							src={commuteConnnect}
-							alt='Commute Connect'
-							projectTitle='Commute Connect'
+							src={finalGradesEstimator}
+							alt='Regression Model'
+							projectTitle='Regression Model for Estimating Exam Score'
 							mobile={false}
-							href='https://github.com/yashkathe/Commute-Connect'
-							description='Commute Connect is a MERN stack application that effortlessly links travelers with similar itineraries, 
-                            allowing them to seamlessly find companions for shared journeys and make their travel experiences more cost-effective.'
+							href='https://github.com/yashkathe/Final-Grades-Estimator-Regression'
+							description=' Created a multi-layer neural network with PyTorch, utilizing the UCI dataset to predict final 
+                            exam scores and achieved accuracy of 96% through hyperparameter optimization and rich feature extraction'
 						/>
 					</div>
 					<div>
@@ -238,7 +263,10 @@ const Projects = () => {
 				<ToastContainer />
 			</div>
 			<p className={styles.credits}>
-				<i>Some images for projects are sourced from the internet, credited to respective owners.</i>
+				<i>
+					Some images for projects are sourced from the internet, credited to
+					respective owners.
+				</i>
 			</p>
 		</div>
 	);
