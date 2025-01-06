@@ -33,15 +33,23 @@ const Project = (props) => {
 	const imageVariants = {
 		initial: {
 			opacity: 0,
-			scale: 0.9,
+			scale: 0.95,
 		},
 		animate: {
 			opacity: 1,
 			scale: 1,
+            transition:{
+				type: "tween",
+				duration: 0.8,
+            }
 		},
 		exit: {
 			opacity: 0,
-			scale: 0.8,
+			scale: 0.9,
+            transition:{
+				type: "tween",
+				duration: 0.65,
+            }
 		},
 	};
 
@@ -53,7 +61,7 @@ const Project = (props) => {
 				setCurrentImageIndex((prevIndex) => (prevIndex + 1) % props.src.length);
 
 				const randomDelay =
-					Math.floor(Math.random() * (5000 - 1000 + 1)) + 1500;
+					Math.floor(Math.random() * (5000 - 1000 + 1)) + 3500;
 				timeout = setTimeout(changeImageAtRandomTime, randomDelay);
 			};
 

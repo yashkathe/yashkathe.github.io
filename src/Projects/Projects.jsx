@@ -33,7 +33,7 @@ const Projects = () => {
 			"Make sure to check my projects on Github! I am continuously working on new projects.",
 			{
 				position: "bottom-right",
-				autoClose: 8000,
+				autoClose: 5000,
 				hideProgressBar: false,
 				closeOnClick: true,
 				pauseOnHover: true,
