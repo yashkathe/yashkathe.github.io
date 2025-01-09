@@ -15,9 +15,13 @@ import f1 from "/Projects/f1-api.png";
 import comics from "/Projects/comics-api.png";
 import archScripts from "/Projects/arch-linux-scripts.png";
 import gpuanalysis from "/Projects/gpu-numba-proj.png";
+import gpuanalysis_2 from "/Projects/gpu-numba-proj-2.png";
+import gpuanalysis_3 from "/Projects/gpu-numba-proj-3.png";
+import gpuanalysis_4 from "/Projects/gpu-numba-proj-4.png";
 import finalGradesEstimator from "/Projects/GradesEstimator.jpeg";
 import heartFailureModel from "/Projects/HeartFailureModel.jpeg";
 import dualencoder from "/Projects/dual-encoder.png";
+import dualencoder_2 from "/Projects/dual-encoder_2.png";
 import cirrhosis from "/Projects/liver-cirrhosis.png";
 import ai_extension_browser from "/Projects/extension_leetcode.webp";
 import masters_pcb from "/Projects/masters-project.png";
@@ -61,9 +65,9 @@ const Projects = () => {
 						<Project
 							delay={Math.random() * 0.2}
 							src={[
+								"https://github.com/yashkathe/Library-Automation-System/raw/master/assets/client_new.png",
+								"https://github.com/yashkathe/Library-Automation-System/raw/master/assets/mix_new.png",
 								"https://github.com/yashkathe/Library-Automation-System/raw/master/assets/project-photo.jpg",
-                                "https://github.com/yashkathe/Library-Automation-System/raw/master/assets/client_new.png",
-                                "https://github.com/yashkathe/Library-Automation-System/raw/master/assets/mix_new.png",
 							]}
 							alt='Library Automation System'
 							projectTitle='Library Automation System'
@@ -76,11 +80,10 @@ const Projects = () => {
 						<Project
 							delay={Math.random() * 0.2}
 							src={[
-                                dualencoder,
-                                "https://yashkathe.github.io/CLIP-local-feature-enhancement/readme_content/base-clip-res.png",
-                                "https://yashkathe.github.io/CLIP-local-feature-enhancement/readme_content/dual-encoder-conc-res.png",
-                                "https://yashkathe.github.io/CLIP-local-feature-enhancement/readme_content/dual-encoder-attention-res.png"
-                            ]}
+								dualencoder_2,
+								"https://yashkathe.github.io/CLIP-local-feature-enhancement/readme_content/hp-tuning.png",
+								dualencoder,
+							]}
 							alt='CLIP enhanchment'
 							projectTitle="Local Feature Enhancement for Open AI's CLIP Model"
 							mobile={false}
@@ -92,9 +95,9 @@ const Projects = () => {
 						<Project
 							delay={Math.random() * 0.2}
 							src={[
+								"https://yashkathe.github.io/Cirrhosis-Prediction/readme_content/accuracy_2.png",
+								"https://yashkathe.github.io/Cirrhosis-Prediction/readme_content/loss_2.png",
 								cirrhosis,
-								"https://yashkathe.github.io/Cirrhosis-Prediction/readme_content/from_scratch_plot.png",
-                                "https://yashkathe.github.io/Cirrhosis-Prediction/readme_content/accuracy_3.png"
 							]}
 							alt='Neural Network from Scratch for Cirrhosis Prediction (With Notes)'
 							projectTitle='Neural Network from Scratch for Cirrhosis Prediction (With Notes)'
@@ -114,7 +117,7 @@ const Projects = () => {
 							description="Master's Research Project on Micro-embedded tracking device for LoRaWAN network in collaboration with Boyd Deep Canyon Research Center"
 						/>
 					</div>
-                    <div>
+					<div>
 						<Project
 							delay={Math.random() * 0.2}
 							src={ai_extension_browser}
@@ -151,10 +154,10 @@ const Projects = () => {
 							delay={Math.random() * 0.2}
 							src={[
 								"https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture4.png",
-                                "https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture2.png",
-                                "https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture7.png",
-                                "https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture3.png"
-                            ]}
+								"https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture2.png",
+								"https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture7.png",
+								"https://raw.githubusercontent.com/yashkathe/Security-system-with-raspberryPi/college-project/assets/Picture3.png",
+							]}
 							alt='Monitoring System'
 							projectTitle='Home Monitoring System'
 							mobile={false}
@@ -166,7 +169,7 @@ const Projects = () => {
 					<div>
 						<Project
 							delay={Math.random() * 0.2}
-							src={gpuanalysis}
+							src={[gpuanalysis, gpuanalysis_3, gpuanalysis_2, gpuanalysis_4]}
 							alt='CPU vs GPU analysis'
 							projectTitle='Runtime Analysis for Image Denoising on CPU and GPU'
 							mobile={false}

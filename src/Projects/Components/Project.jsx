@@ -37,7 +37,7 @@ const Project = (props) => {
 		},
 		animate: {
 			opacity: 1,
-			scale: 1,
+			scale: hover ? 1.1 : 1,
             transition:{
 				type: "tween",
 				duration: 0.8,
@@ -95,7 +95,7 @@ const Project = (props) => {
 			<div className={props.mobile ? styles.mobileImg : styles.pcImg}>
 				<AnimatePresence mode='wait'>
 					<motion.img
-						key={currentImageIndex} // Use key to trigger exit and re-render
+						key={currentImageIndex} 
 						src={
 							Array.isArray(props.src)
 								? props.src[currentImageIndex]
