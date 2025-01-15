@@ -38,18 +38,18 @@ const Project = (props) => {
 		animate: {
 			opacity: 1,
 			scale: hover ? 1.1 : 1,
-            transition:{
+			transition: {
 				type: "tween",
 				duration: 0.8,
-            }
+			},
 		},
 		exit: {
 			opacity: 0,
 			scale: 0.9,
-            transition:{
+			transition: {
 				type: "tween",
 				duration: 0.65,
-            }
+			},
 		},
 	};
 
@@ -95,7 +95,7 @@ const Project = (props) => {
 			<div className={props.mobile ? styles.mobileImg : styles.pcImg}>
 				<AnimatePresence mode='wait'>
 					<motion.img
-						key={currentImageIndex} 
+						key={currentImageIndex}
 						src={
 							Array.isArray(props.src)
 								? props.src[currentImageIndex]
@@ -125,6 +125,7 @@ const Project = (props) => {
 									variants={variantsCtx.rotateBy45}
 									initial='initial'
 									animate='animate'
+									exit='exit'
 								/>
 							</a>
 						</div>

@@ -88,16 +88,25 @@ const VarientStore = React.createContext({
 
 	rotateBy45: {
 		initial: {
-			rotate: 0,
+			rotate: 0.5,
+            opacity:0
 		},
 		animate: {
 			rotate: -45,
+            opacity:1,
 			transition: {
 				type: " tween",
-				duration: 0.38,
-				delay: 0.2,
+				duration: 0.6,
 			},
 		},
+        exit:{
+            rotate: 0,
+            opacity:0,
+            transition: {
+				type: " tween",
+				duration: 0.5,
+			},
+        }
 	},
 
 	slideUp: {
