@@ -48,6 +48,20 @@ const VarientStore = React.createContext({
 		},
 	},
 
+    increaseSizeAndOpacity: {
+        initial: {
+            opacity: 0.5,
+            scale: 0.9
+        },
+        animate: {
+            opacity: 1,
+            scale: 1,
+            transition:{
+                duration: 0.5
+            }
+        }
+    },
+
 	mobilePop: {
 		initial: {
 			scale: 0.95,

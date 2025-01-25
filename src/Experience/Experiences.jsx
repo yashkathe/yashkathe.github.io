@@ -30,10 +30,10 @@ const Experiences = () => {
 					<Experience
 						flip={true}
 						imageSrc={ucr}
-						jobTitle='Directed Researcher'
+						jobTitle='Directed Research'
 						advisor='Advisor: Professor Zhaowei Tan'
 						advisor_href='https://cs.ucr.edu/~ztan/#group'
-						company='GeNeLa - Networking Lab @ UC Riverside'
+						company='GeNeLa - Networking Lab'
 						company_href='https://cs.ucr.edu/~ztan/group.html'
 						jobDescription1='• Developing a micro embedded tracking device with LoRaWAN support and GNSS capabilities, optimized for low power consumption and energy efficiency'
 						jobDescription2='• Designed and created a PCB using EasyEDA to transmit GNSS coordinates to a custom Raspberry Pi-based LoRaWAN gateway'
@@ -42,7 +42,7 @@ const Experiences = () => {
 					<Experience
 						flip={false}
 						imageSrc={sfit}
-						jobTitle='Undergraduate Research'
+						jobTitle='Capstone Research Project'
 						advisor='Advisor: Dr. Gautam Shah'
 						advisor_href='https://www.sfit.ac.in/faculty-profile.php?id=26'
 						company='St. Francis Institute of Technology'
@@ -58,7 +58,7 @@ retrieve book information from the Google Books API to enable real-time inventor
 					<Experience
 						flip={true}
 						imageSrc={iotiot}
-						jobTitle='Dev Ops Engineer Intern'
+						jobTitle='Systems Software Developer Intern'
 						company='IotIot.in'
 						company_href='https://iotiot.in/'
 						jobDescription1="• Automated Linux environment testing, package installation, and boot script creation for 'Brainy Pi' using Bash scripts, improving testing efficiency and deployment time"

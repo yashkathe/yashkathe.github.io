@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { motion } from "framer-motion";
 
 import styles from "./GithubStats.module.css";
 
 import Spinner from "../../Shared/Spinner/Spinner2";
+import VarientStore from "../../Store/VarientStore";
 
 import star from "/Icons/github-star.png";
 import fork from "/Icons/github-fork.png";
@@ -11,6 +13,8 @@ const GithubStats = () => {
 	const [stats, setStats] = useState({ stars: 0, forks: 0 });
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
+
+	const variantsCtx = useContext(VarientStore);
 
 	useEffect(() => {
 		const fetchStats = async () => {
@@ -38,18 +42,31 @@ const GithubStats = () => {
 
 	return (
 		<div className={styles.parent}>
-			{loading && <Spinner/>}
+			{loading && <Spinner />}
 			{error && <p>Error: {error}</p>}
 			{!loading && !error && (
 				<>
-					<div className={styles.statItem}>
+					<motion.div
+						className={styles.statItem}
+						variants={variantsCtx.increaseSizeAndOpacity}
+						initial='initial'
+						animate='animate'>
 						<img src={star} alt='star' className={styles.icon} />
-						<span>{stats.stars} Stars</span>
-					</div>
-					<div className={styles.statItem}>
+						<span
+							variants={variantsCtx.increaseSizeAndOpacity}
+							initial='initial'
+							animate='animate'>
+							{stats.stars} Stars
+						</span>
+					</motion.div>
+					<motion.div
+						className={styles.statItem}
+						variants={variantsCtx.increaseSizeAndOpacity}
+						initial='initial'
+						animate='animate'>
 						<img src={fork} alt='fork' className={styles.icon} />
 						<span>{stats.forks} Forks</span>
-					</div>
+					</motion.div>
 				</>
 			)}
 		</div>
