@@ -72,12 +72,12 @@ const MobileLinks = (props) => {
 					src={linkedin}
 					href='https://www.linkedin.com/in/yashkathe/'
 				/>
-				<FMSocials
+				{/* <FMSocials
 					isMobile={true}
 					alt='leetcode'
 					src={leetcode}
-					href='https://leetcode.com/yashkathe/'
-				/>
+				    href='https://leetcode.com/kathe_yash/'
+				/> */}
 				<FMSocials
 					isMobile={true}
 					alt='npm'

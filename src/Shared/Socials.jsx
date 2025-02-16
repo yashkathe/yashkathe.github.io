@@ -23,11 +23,11 @@ const Socials = (props) => {
 				src={github}
 				href='https://github.com/yashkathe'
 			/>
-			<FMSocials
+			{/* <FMSocials
 				alt='leetcode'
 				src={leetcode}
-				href='https://leetcode.com/yashkathe/'
-			/>
+				href='https://leetcode.com/kathe_yash/'
+			/> */}
             <FMSocials
                 alt='npm'
                 src={npm}
