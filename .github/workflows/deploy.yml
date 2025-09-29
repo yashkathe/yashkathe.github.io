@@ -2,7 +2,7 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch: {}
 
 permissions:
@@ -38,24 +38,6 @@ jobs:
           VITE_API_EMAILJS_SERVICE: ${{ secrets.VITE_API_EMAILJS_SERVICE }}
           VITE_API_EMAILJS_KEY: ${{ secrets.VITE_API_EMAILJS_KEY }}
 
-      - name: Debug: show repo & build output
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Root listing (top-level):"
-          ls -la
-          echo "Check ./dist, ./build, ./public"
-          for d in ./dist ./build ./public; do
-            echo "---- $d ----"
-            if [ -d "$d" ]; then
-              echo "$d exists"
-              ls -la "$d" || true
-              du -sh "$d" || true
-            else
-              echo "$d does not exist"
-            fi
-          done
-
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
@@ -67,4 +49,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
