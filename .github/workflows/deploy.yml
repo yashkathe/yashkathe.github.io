@@ -3,7 +3,7 @@ name: Deploy static content to Pages
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 permissions:
   contents: read
@@ -25,7 +25,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: "18"
           cache: "npm"
 
       - name: Install dependencies
@@ -40,16 +40,17 @@ jobs:
 
       - name: Debug: show repo & build output
         run: |
+          echo "Current directory:"
           pwd
-          echo "Root listing:"
+          echo "Root listing (top-level):"
           ls -la
           echo "Check ./dist, ./build, ./public"
           for d in ./dist ./build ./public; do
             echo "---- $d ----"
-            if [ -d $d ]; then
+            if [ -d "$d" ]; then
               echo "$d exists"
-              ls -la $d || true
-              du -sh $d || true
+              ls -la "$d" || true
+              du -sh "$d" || true
             else
               echo "$d does not exist"
             fi
@@ -66,3 +67,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
